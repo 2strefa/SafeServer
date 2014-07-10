@@ -1,0 +1,57 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Rejestracja ukończona{% endblock %}
+
+
+
+{% block description %}Gratulacje! Pomyślnie ukończyłeś proces rejestracji!{% endblock %}
+
+
+
+{% block content %}
+
+    <div id="column_cont_wrapper">
+
+        <div class="oferta_teraz">
+
+            <div class="breadcrumbs">
+
+                <a href="{% url home_index %}">Strona Główna</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a href="{% url registration_register %}" rel="nofollow" title="Rejestracja konta klienta">Rejestracja</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a class="on" href="{% url registration_end %}" rel="nofollow" title="Rejestracja zakończona" >Zakończona</a>
+
+            </div>
+
+            <h2>Rejestracja zakończona</h2>
+
+        </div>
+
+        <div class="oferta_teraz2">
+
+            <div class="column_center">
+
+                <div id="przypom">
+
+                    <p>
+
+                        Rejestracja zakończona pomyślnie. Na podany adres e-maila, został wysłany link aktywacyjny utowrzonego konta. Aby aktywować Swój profil na SafeServer.pl, teraz musisz go tylko kliknąć, bądź skopiować w całości do paska adresu przeglądarki internetowej.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

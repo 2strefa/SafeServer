@@ -1,0 +1,232 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>{{ title }}</title>
+<style type="text/css">
+    @page {
+        size: {{ pagesize|default:'A4' }};
+        margin: 1.5cm 1cm;}
+        @frame header {
+            -pdf-frame-content: headerContent;
+            top: 1cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
+            height: 0.5cm;
+        }
+        @frame footer {
+            -pdf-frame-content: footerContent;
+            bottom: 0.5cm;
+            margin-left: 1cm;
+            margin-right: 1cm;
+            height: 0.5cm;
+        }
+    @font-face {
+        font-family: arial, "arial";
+        src: url("{{ STATIC_URL }}fonts/Verdana.ttf");
+    }
+    body {
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        background: #FFFFFF;
+        margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+        padding: 0;
+        text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+        color: #000000;
+        font-size: 11px;
+    }
+    .color1{background-color: #dadada}
+    .color2{background-color: #ffffff}
+</style>
+</head>
+<body>
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th scope="col"><div align="left"><img src="{{ STATIC_URL }}images/szarelogo.png" alt="safeserver.pl" height="50" border="0" style="margin-bottom:10px;"/></div></th>
+    <th scope="col"><div align="right">
+      <p>{{ nazwa_faktury }}</p>
+        <p style="color:#999; line-height:16px; margin:0;">Oryginał</p>
+    </div></th>
+  </tr>
+</table>
+
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th colspan="2" align="left"  style="font-weight:normal; padding:5px 9px 5px 9px; line-height:1.3em" scope="col"> <hr style="color: #ececec" /></th>
+  </tr>
+  <tr>
+
+    <th align="left" scope="col" width="480"  style="font-weight:normal; padding:2px; line-height:1.3em;">
+    <b>Sprzedawca:</b><br />
+        A.P.U.R „2 Strefa” Albert Kowalewski<br />
+        ul. Jarzębinowa 24/6<br />
+        15-793 Białystok<br />
+        NIP: 542-272-14-34<br />
+        REGON: 200248188<br />
+        {% if nr_konta %}
+        NAZWA BANKU: {{ nr_konta.nazwa_banku }}<br />
+        NR RACHUNKU: {{ nr_konta.numer_konta }}
+        {% endif %}
+    </th>
+    <th width="420" align="right" scope="col" style="font-weight:normal; padding:2px; line-height:1.3em;">
+        <b>Data wystawienia:</b>{{ data_wystawienia }}<br />
+        <b>Data sprzedaży:</b>{{ data_wystawienia }}<br />
+        <b>Miejsce wystawienia: </b>Białystok<br />
+        <b>Termin płatności: </b>1 dzień<br />
+        <b>Sposób zapłaty: </b>{{ rodzaj_platnosci }}<br />
+   </th>
+  </tr>
+
+   <tr>
+     <th align="left"  class="color1" style="font-weight:bold; padding:5px 9px 5px 9px; line-height:1.3em;" scope="col">Nabywca:</th>
+     <th align="left"  class="color1" style="font-weight:bold; padding:5px 9px 5px 15px; line-height:1.3em;" scope="col">Adres korespondencyjny:</th>
+   </tr>
+   <tr>
+    <th align="left"  style="font-weight:normal; padding:5px 9px 5px 9px; line-height:1.3em;" scope="col">
+        {{ nazwa_klienta }}<br />
+        {% if nazwa_firmy %}
+        {{ nazwa_firmy }}<br />
+        {% endif %}
+        ul. {{ adres }}<br />
+        {{ kod_pocztowy }} {{ miasto }}<br />
+        {% if nip %}
+        NIP: {{ nip }}<br />
+        {% endif %}
+        {% if regon %}
+        REGON: {{ regon }}  <br />
+        {% endif %}
+    </th>
+    <th align="left"  style="font-weight:normal; padding:5px 9px 5px 15px; line-height:1.3em;" scope="col">
+        {{ nazwa_klienta }}<br />
+        {% if nazwa_firmy %}
+        {{ nazwa_firmy }}<br />
+        {% endif %}
+        ul. {{ adres }}<br />
+        {{ kod_pocztowy }} {{ miasto }}<br />
+        {% if nip %}
+        NIP: {{ nip }}<br />
+        {% endif %}
+        {% if regon %}
+        REGON: {{ regon }}  <br />
+        {% endif %}
+    </th>
+  </tr>
+</table>
+
+<table width="900"  cellspacing="1" cellpadding="1">
+   <tr>
+     <th width="50" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">L.p.</th>
+     <th width="380" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">Nazwa</th>
+     <th width="70" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">Ilość</th>
+     <th width="90" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">Cena&nbsp;netto</th>
+     <th width="85" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">VAT&nbsp;%</th>
+     <th width="85" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">VAT</th>
+     <th width="115" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">Wartość&nbsp;brutto</th>
+   </tr>
+   <tr>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-size:9px; padding:2px; line-height:1.3em;" scope="col">Opłata za zrealizowane transakcje:</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">&nbsp;
+    </th>
+    {% for i in dodatki %}
+   <tr>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ forloop.counter }}</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ i.nazwa }}</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">1</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ i.cena_netto }}</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">23,00%</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ i.dodatek_vat }}</th>
+    <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ i.cena_brutto }}
+    </th>
+    {% endfor %}
+  </tr>
+
+</table>
+<table width="900"  cellspacing="1" cellpadding="1">
+  <tr>
+    <th colspan="5" align="center"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col"> <hr style="color: #ececec" /></th>
+  </tr>
+  <tr>
+    <th width="500" align="left" class="color2" style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th width="90" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em; text-align: left;" scope="col">Kwota&nbsp;netto</th>
+    <th width="85" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em; text-align: left;" scope="col">VAT&nbsp;%</th>
+    <th width="85" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em; text-align: left;" scope="col">Kwota&nbsp;VAT</th>
+    <th width="115" align="left"  class="color1" style="font-weight:bold; padding:2px; line-height:1.3em; text-align: left;" scope="col">Kwota&nbsp;brutto</th>
+  </tr>
+   <tr>
+     <th align="left"  style="font-weight:bold; padding:2px; line-height:1.3em; text-align: right;" scope="col">&nbsp;</th>
+     <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ razem_netto }}</th>
+     <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">23,00%</th>
+     <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ razem_vat }}</th>
+     <th align="left"  style="font-weight:normal; padding:2px; line-height:1.3em;" scope="col">{{ razem_brutto }}</th>
+   </tr>
+   <tr>
+     <th align="right"  style="font-weight:bold; padding:2px; line-height:1.3em; text-align: right;" scope="col">RAZEM:</th>
+    <th align="left"  style=" font-weight:bold; padding:2px; line-height:1.3em;" scope="col">{{ razem_netto }}</th>
+    <th align="left"  style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">&nbsp;</th>
+    <th align="left"  style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">{{ razem_vat }}</th>
+    <th align="left"  style="font-weight:bold; padding:2px; line-height:1.3em;" scope="col">{{ razem_brutto }}<br />
+    </th>
+  </tr>
+</table>
+
+<br />
+
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th width="155" scope="col" align="left">Razem do zapłaty:</th>
+    <th width="411" scope="col" align="left">{{ razem_brutto }} zł</th>
+    <th width="284" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    <th scope="col" align="left">Słownie złotych:</th>
+    <th scope="col" align="left">{{ razem_slownie }}</th>
+    <th scope="col" align="left">&nbsp;</th>
+  </tr>
+</table>
+
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th width="395" scope="col" align="left">&nbsp;</th>
+    <th width="470" scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+    <th scope="col" align="left">&nbsp;</th>
+    <th scope="col" align="left">&nbsp;</th>
+  </tr>
+  <tr>
+    <th scope="col" style="font-size:10px;  font-weight:normal; text-align:center">{{ nazwa_klienta }}</th>
+     <th scope="col" style="font-size:10px; font-weight:normal; text-align:center">Albert Kowalewski</th>
+  </tr>
+  <tr>
+      <th align="left"  style="font-weight:normal; padding:5px 9px 5px 9px; line-height:1em" scope="col"><hr style="color: #ececec" /></th>
+      <th align="left"  style="font-weight:normal; padding:5px 9px 5px 9px; line-height:1em" scope="col"><hr style="color: #ececec" /></th>
+  </tr>
+  <tr>
+    <th scope="col" style="font-size:9px;  font-weight:normal; text-align:center">Osoba upoważniona do odbioru</th>
+     <th scope="col" style="font-size:9px; font-weight:normal; text-align:center">Osoba upoważniona do wystawienia</th>
+  </tr>
+</table>
+
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th width="284" scope="col">&nbsp;</th>
+  </tr>
+</table>
+
+<table width="900" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <th colspan="2" align="center" class="color1" style="padding:5px 9px 5px 9px; line-height:1.3em;" scope="col" cellspacing="5" cellpadding="5"><b>
+        Oryginał faktury będzie przesłany na e-mail.</b><br />
+    </th>
+  </tr>
+  <tr>
+    <th width="395" align="left" scope="col">&nbsp;</th>
+    <th width="470" align="left" scope="col">&nbsp;</th>
+  </tr>
+</table>
+
+</body>
+</html>

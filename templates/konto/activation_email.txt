@@ -1,0 +1,7 @@
+Witaj.
+
+Dziękujemy za rejestrację na SafeServer.pl
+
+Aby aktywować swoje konto, kliknij na poniższy link w celu potwierdzenia adresu email.
+
+http://safeserver.pl{% url registration_activate activation_key=activation_key %}

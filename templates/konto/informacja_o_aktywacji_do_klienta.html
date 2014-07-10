@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Informacja o aktywacji zamówienia - SafeServer.pl</title>
+</head>
+<style>
+.batak{background-color: #3a94be; padding: 20px;}
+a:link {color:#fba12c;}
+a:visited {color:#fba12c;}
+a:hover {color:#fba12c;}
+a:active {color:#fba12c;}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}</style>
+<body>
+<body style="background:#FFFFFF; font-family:Tahoma, Arial, Helvetica, sans-serif; font-size:13px; margin:0; padding:0; font-weight:normal;">
+<div style="background:#f6f5f5; font-family:Tahoma, Arial, Helvetica, sans-serif; font-size:13px; margin:0; padding:0; font-weight:normal;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+<tr>
+    <td align="center" valign="top" style="padding:20px 0 20px 0">
+        <!-- [ header starts here] -->
+        <table bgcolor="#FFFFFF" cellspacing="0" cellpadding="10" border="0" width="940" style="border:1px solid #e0e0e0;">
+            <tr>
+                <td valign="top" class="batak">
+                    <center>
+                        <p style="font-size:14px; line-height:2em; margin:0;">
+                            <p>
+                                <img title="SafeServer.pl - Najtańszy hosting w sieci." alt="SafeServer Logo" src="http://safeserver.pl/static/images/logotyp.png">
+                            </p>
+                        <h1 style="color: #FFFFFF; font-size:20px; font-weight:bold; line-height:30px; margin:0 0 11px 0;">INFORMACJA O ZAMÓWIENIU NR. {{ numer_zamowienia }} Z DNIA: {{ data_zamowienia }}</h1>
+                        <p style="font-size:14px; line-height:2em; margin:0; color: #FFFFFF;">
+                           {{ text1 }}<br>
+                           {{ text2 }}
+                       </p>
+                       </p>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 style="font-size:15px; font-weight:bold; margin:0;">Przesłane dane :</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" border="0" width="940">
+                        <thead>
+                        <tr>
+                            <th align="left" width="580" bgcolor="#9abdd0" style="font-size:15px; padding:5px 9px 6px 9px; line-height:1em;">Dane kontaktowe:</th>
+                            <th width="10"></th>
+                            <th align="left" width="460" bgcolor="#9abdd0" style="font-size:15px; padding:5px 9px 6px 9px; line-height:1em;">Dane dodatkowe:</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="font-size:14px; font-weight:normal; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA; line-height:2em;">
+                           <b>Login: </b>{{ login }}<br>
+                           <b>Adres email: </b><a href="mailto:{{ email_me }}">{{ email_me }}</a><br />
+                           <b>Imię i Nazwisko: </b>{{ imie }} {{ nazwisko }}<br>
+                           <b>Adres:</b> {{ adress }}, {{ kod_pocztek }} {{ miastoo }}, {{ krajj }}<br>
+                           <b>Województwo:</b> {{ wojewodd }}<br>
+                           <b> Telefon kontaktowy:</b> {{ telefonn_dodat }}<br>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td valign="top" style="font-size:14px; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA; line-height:2em;">
+                            <b> Nazwa firmy:</b> {{ nazwa_firmyy }}<br>
+                            <b> Numer NIP:</b> {{ nip_fir }}<br>
+                            <b> Numer REGON:</b> {{ regon_fir }}<br>
+                            <b> Telefon dodatkowy: </b>{{ imie_firmy }}<br />
+                            <b> Rodzaj płatności: </b><span style="font-weight: bold; color: #3A94BE;">{{ rodzaj_platnosci }}</span><br />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th align="left" width="922" bgcolor="#FBA12C" style="font-size:13px; padding:5px 9px 6px 9px; line-height:1em;">Szczegóły zamówienia:</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td valign="top" style="font-size:15px; padding:7px 9px 9px 9px; border-left:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; border-right:1px solid #EAEAEA; line-height:2em;">
+                            {{ pay_nazwa }}:
+                                <ul>
+                                {% for i in list_dodatki %}
+                                    <li>{{ i }}</li>
+                                {% endfor %}
+                                </ul>
+                            </td>
+                            <td></td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#EAEAEA" align="center" style="background:#FFFFFF; text-align:center;"><center><p style="font-size:12px; margin:0;">Informacja o zamówieniu, również możesz sprawdzić na Swoim: <strong><a href="http://safeserver.pl/login/">Panelu Klienta</a></strong></p></center></td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+</div>
+</body>

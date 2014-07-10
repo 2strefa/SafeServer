@@ -1,0 +1,314 @@
+{% extends "base_layout.html" %}
+
+{%  block title %}Rejestracja klienta{% endblock %}
+
+{% block description %}Aby się zarejestrować w naszym serwisie, należy uzupełnić wszystkie pola oznaczone gwiazdką.{% endblock %}
+
+{% block content %}
+
+    <div class="oferta_teraz">
+
+        <div class="ofert_ter">Rejestracja - <span style="color: #8f8f8f;">konta klienta</span></div>
+
+    </div>
+        <div class="oferta_teraz">
+
+        <div class="posiadasz_konto">
+		<div class="baton_kerte"><a href="/login/">Zaloguj się</a></div>
+		<span style="float: right; margin-top: 6px;">Jeśli posiadasz już konto:</span>
+		</div>
+
+    </div>
+
+    <div class="otera">* pola oznaczone gwiazdką są obowiązkowe</div>
+
+    <div class="oferta_teraz2">
+
+        <form id="login" action="." method="POST">
+
+            {% csrf_token %}
+
+            <div class="alerty">
+
+                {{ formers.non_field_errors }}
+
+                {{ formers.jestem.errors }}
+                {{ formers.login.errors }}
+                {{ formers.first_name.errors }}
+                {{ formers.last_name.errors }}
+                {{ formers.email.errors }}
+                {{ formers.password1.errors }}
+                {{ formers.password2.errors }}
+                {{ formers.adres.errors }}
+                {{ formers.miasto.errors }}
+                {{ formers.kod_pocztowy.errors }}
+                {{ formers.kraj.errors }}
+                {{ formers.wojewodztwo.errors }}
+                {{ formers.phone.errors }}
+                {{ formers.dodatkow_tel.errors }}
+                {{ formers.pelnanazwafirmy.errors }}
+                {{ formers.nip.errors }}
+                {{ formers.regon.errors }}
+                {{ formers.akceptacja_vat.errors }}
+                {{ formers.chce_newsletter.errors }}
+                {{ formers.akc_regul.errors }}
+
+            </div>
+
+            <div class="klasyk_login">
+
+            <div class="dane_header">Kim jesteś?<span style="color: #ff0000;">*</span>:</div>
+            <div class="dane_loginn">
+                <div class="kom_jesttt">
+                    {{ formers.jestem }}
+                </div>
+            </div>
+            <div  class="dane_header">Dane podstawowe:</div>
+
+            <div class="dane_loginn">
+
+                <div class="input_login">
+
+                    <div class="label_klik">
+
+                        <label for="id_login">Login<span style="color: #ff0000;">*</span> :</label>
+
+                    </div>
+                    <br/>
+                    {{ formers.login }}
+
+                </div>
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_first_name">Imię<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.first_name }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Nazwisko<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.last_name }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">E-mail<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.email }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Hasło<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    <input class="input_klik" id="id_password1" type="password" name="password1">
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Powtórz hasło<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    <input class="input_klik" id="id_password2" type="password" name="password2">
+
+                </div>
+
+            </div>
+
+            <div  class="dane_header">Dane teleadresowe:</div>
+
+            <div class="dane_loginn">
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Adres<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.adres }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Miasto<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.miasto }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Kod pocztowy<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.kod_pocztowy }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Kraj<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                   {{ formers.kraj }}
+
+                </div>
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Województwo :</label></div><br/>
+
+                   {{ formers.wojewodztwo }}
+
+                </div>
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Telefon<span style="color: #ff0000;">*</span> :</label></div><br/>
+
+                    {{ formers.phone }}
+
+                </div>
+
+
+
+                <div class="input_login2">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Dodatkowy telefon:</label></div><br/>
+
+                   {{ formers.dodatkow_tel }}
+
+                </div>
+
+            </div>
+            <div  class="dane_header">Dane do faktury:</div>
+            <div class="dane_loginn">
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">Nazwa firmy:</label></div><br/>
+
+                    {{ formers.pelnanazwafirmy }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">NIP:</label></div><br/>
+
+                    {{ formers.nip }}
+
+                </div>
+
+
+
+                <div class="input_login">
+
+                     <div class="label_klik">
+
+                    <label for="id_last_name">REGON:</label></div><br/>
+
+                    {{ formers.regon }}
+
+                </div>
+
+            </div>
+
+
+
+                <div class="input_login_kliki">
+
+                     <div class="label_klik">
+
+                         {{ formers.akceptacja_vat }}
+
+                    <label for="id_last_name">Chcę otrzymywać fakturę VAT tradycyjną pocztą. W innym wypadku fakturę VAT dostaniesz drogą elektroniczną.</label></div>
+
+
+                </div>
+
+
+
+                <div class="input_login_kliki">
+
+                     <div class="label_klik">
+
+                         {{ formers.chce_newsletter }}
+
+                    <label for="id_last_name">Chcę być na bieżąco ze wszystkimi nowościami na SafeServer.pl i otrzymywać newsletter.</label></div>
+
+                </div>
+
+
+
+                <div class="input_login_kliki">
+
+                     <div class="label_klik">
+
+                         {{ formers.akc_regul }}
+
+                    <label for="id_last_name">Przeczytałem i akceptuję wszystkie <a href="{% url regulamin_index %}">Regulaminy Hostingu</a><span style="color: #ff0000;">*</span> :</label>
+
+                </div>
+
+            </div>
+            <div class="input_login_reje">
+               <div class="submit_button">
+                    <input class="button_rejestracja" type="submit" value="" />
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+
+
+{% endblock %}

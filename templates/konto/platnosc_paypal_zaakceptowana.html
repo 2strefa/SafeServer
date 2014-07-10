@@ -1,0 +1,57 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Płatność PayPal zaakceptowana{% endblock %}
+
+
+
+{% block description %}Twoja płatność została zaakceptowana. Dziękujemy za skorzystanie z naszej oferty.{% endblock %}
+
+
+
+{% block content %}
+
+    <div id="column_cont_wrapper">
+
+        <div class="oferta_teraz">
+
+            <div class="breadcrumbs">
+
+                <a href="{% url home_index %}">Strona Główna</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a href="{% url konto_index %}" rel="nofollow" title="Rejestracja konta klienta">Konto klienta</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a class="on" href="{% url paypal_akceptacja_index %}" rel="nofollow" title="Akceptacja płatności" >Akceptacja płatności</a>
+
+            </div>
+
+            <h2>Płatność PayPal zaakceptowana</h2>
+
+        </div>
+
+        <div class="oferta_teraz2">
+
+            <div class="column_center">
+
+                <div id="przypom">
+
+                    <p>
+
+                        Dziękujemy za dokonanie płatności. W przeciągu 24 godzin na podanego e-maila przy rejestracji zostaną przesłane dane do zakupionego przez Ciebie serwera. Życzymy miłej współpracy z SafeServer.pl
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

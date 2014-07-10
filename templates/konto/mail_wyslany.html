@@ -1,0 +1,52 @@
+{% extends "base_layout.html" %}
+
+{%  block title %}
+    Kontakt - Mail został wyslany
+{% endblock %}
+
+{% block content %}
+    <div class="oferta_teraz">
+
+        <div class="ofert_ter"><span style="font-weight: bold;">Kontakt</span></div>
+
+   </div>
+
+        <div class="detale_oferty">
+            <div class="srodek_loginu">
+                                    <div class="danke_tekst">
+                        <div class="dane_firmowee">
+                            <span style="font-weight: bold;">Agencja Projektowo-Usługowo-Reklamowa '2 STREFA' <br/>Albert Kowalewski</span><br/><br/>
+
+                            <span style="font-weight: bold;">ADRES DO KORESPONDENCJI:</span><br/>
+                            ul. Zastawie I 11<br/>
+                            16-070 Choroszcz<br/>
+                            <div class="link_drink"><a href="mailto:biuro@safeserver.pl">biuro@safeserver.pl</a></div><br/>
+
+                            <span style="font-weight: bold;">SIEDZIBA:</span><br/>
+                            ul. Jarzębinowa 24/6<br/>
+                            15-739 Bialystok<br/><br/>
+
+                            <span style="font-weight: bold;">tel./fax</span> + 48 (85) 719-34-71<br/>
+                            <span style="font-weight: bold;">tel.kom</span> + 504 518 520<br/><br/>
+
+                            <span style="font-weight: bold;">Prosimy o kontakt tel. w godz.:</span><br/>
+                            od 8:00 do 16:00<br/>
+                            od pon. do pt.<br/><br/>
+
+                            <span style="font-weight: bold;">NIP:</span> <span style="font-style: italic;">PL</span>542-272-14-34<br/>
+                            <span style="font-weight: bold;">REGON:</span> 200248188<br/><br/>
+
+                            <span style="font-weight: bold;">BANK ING</span><br/>
+                            93 1050 1823 1000 0090 6564 6151<br/>
+
+                        </div>
+                        <div class="google_mapa">
+                           <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.pl/maps?f=q&amp;source=embed&amp;hl=pl&amp;geocode=&amp;q=Zastawie+I+11,+Choroszcz&amp;aq=t&amp;sll=53.150921,23.111361&amp;sspn=0.005771,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=Zastawie+I+11,+16-070+Choroszcz,+bia%C5%82ostocki,+podlaskie&amp;t=m&amp;ll=53.135358,22.98499&amp;spn=0.091542,0.264187&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.pl/maps?f=q&amp;source=embed&amp;hl=pl&amp;geocode=&amp;q=Zastawie+I+11,+Choroszcz&amp;aq=t&amp;sll=53.150921,23.111361&amp;sspn=0.005771,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=Zastawie+I+11,+16-070+Choroszcz,+bia%C5%82ostocki,+podlaskie&amp;t=m&amp;ll=53.135358,22.98499&amp;spn=0.091542,0.264187&amp;z=13&amp;iwloc=A" style="color:#0000FF;text-align:left">Wyświetl większą mapę</a></small>
+                        </div>
+                    </div>
+                   <div class="klasyk_login">
+                    <span style="width: 100%; float: left;font-size: 13px;line-height: 35px; margin: 55px; text-align: center;">Mail został wysłany poprawnie. Dziękujemy za skorzystanie z Naszego formularza kontaktowego.<br/> Na Państwa pytania postaramy się odpowiedzieć w jak najszybszym czasie.<br/>Kliknij na poniższy link aby powrócić do, <div class="formu_larze"><a href="{% url kontakt_index %}"> Formularza</a></div></span>
+                   </div>
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,563 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Oferta Business{% endblock %}
+
+
+
+{% block description %}Oferta Hostingowa Business, skierowana jest do klientów biznesowych i takich którzy myślą o zarabianiu w Internecie. Szukają serwera pod sklepy internetowe oraz pewnej i 24H obsługi danych oraz pomocy technicznej{% endblock %}
+
+
+
+{% block content %}
+
+
+
+    <div class="oferta_teraz">
+
+
+
+
+
+
+
+        <div class="ofert_ter">Serwer BUSINESS - <span style="color: #8f8f8f;">zamówienie</span></div>
+
+
+
+
+
+
+
+        <div class="powrot_oferta"><a href="{% url hosting_index %}"><img src="{{ STATIC_URL }}images/powrot_oferta.png" alt="Powrót do oferty" title="Powrót do oferty hostingu" /></a></div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="oferta_teraz">
+
+
+
+
+
+
+
+        <div class="sciezka_center">
+
+
+
+
+
+
+
+            <div class="przciski_listy">Specyfikacja serwera</div>
+
+
+
+
+
+
+
+            <div class="przciski_listy2">Dodatki</div>
+
+
+
+
+
+
+
+            <div class="przciski_listy2">Weryfikacja klienta</div>
+
+
+
+
+
+
+
+            <div class="przciski_listy2">Płatność</div>
+
+
+
+
+
+
+
+            <div class="przciski_listy2">Podsumowanie</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="boks_plikow">
+
+
+
+
+
+
+
+        <div class="szczegoly_oferty">
+
+
+
+
+
+
+
+            <img src="{{ STATIC_URL }}images/buisness.png" alt="Oferta Business" title="Oferta Business" />
+
+
+
+
+
+
+
+            289,00 zł cena netto<br/>
+
+
+
+
+
+
+
+            w abonamencie rocznym
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="szczegoly_opisy">
+
+
+
+
+
+
+
+            <span style="font-weight: bold; color: #000000;">Podstawowe parametry serwera BUSINESS</span>.<br/>
+
+
+
+
+
+
+
+            <span style="font-size: 11px; color: #aeaeae;">Oferta Hostingowa Business, skierowana jest do klientów biznesowych i takich którzy myślą o zarabianiu w Internecie.</span>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="szczegoly_bezpieczne">
+
+
+
+
+
+
+
+            <img src="{{ STATIC_URL }}images/bezpieczne.png" alt="Bezpieczeństwo" title="Bezpieczeństwo na najwyższym poziomie" />
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="detale_oferty">
+
+
+
+
+
+
+
+        <div class="parametry_oferty">
+
+
+
+            <div class="pra_of">Parametry:</div>
+
+
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Pojemność konta</div><div class="ilosc_tek">150 GB</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Ilość miejsca na serwerze, które będzie do Twojej dyspozycji."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Transfer</div><div class="ilosc_tek">Bez limitów</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Transfer danych nie jest limitowany."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Konta FTP</div><div class="ilosc_tek">Bez limitów</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Konto FTP umożliwia natychmiastowe umieszczenie danych na serwerze oraz ich późniejsze aktualizacje."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Anonimowy FTP</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Umożliwia niezabezpieczony dostęp (bez hasła) do wybranych informacji w systemie zdalnym. Idealnie sprawdza się w publikacji cenników, ofert itp."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Bazy danych MySQL</div><div class="ilosc_tek">Bez limitów</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Szybkość dzałania, uniwersalność języka oraz proste zarządzanie bazą poprzez cPanel."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Bazy danych Postgre SQL</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Obiektowo-relacyjny system baz danych, który posiada mechanizmy wyzwalaczy, reguł oraz widoków."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Dostęp do pakietu QuickInstall</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki temu posiadasz dostęp do gotowych aplikacji przygotowanych do instalacji w Twoim serwisie np. Joomla!, Wordpress itp."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Statystyki stron</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dostęp do statystyk oglądalności Twego serwisu umożliwi Ci m.in.: monitorowanie ruchu na stronie,badanie która część serwisu jest najczęściej odwiedzana i przez kogo."/></div>
+
+
+
+            <div class="pra_of">E-mail:</div>
+
+
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Liczba skrzynek pocztowych</div><div class="ilosc_tek">Bez limitów</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Możesz tworzyć nieograniczoną liczbę kont pocztowych dla siebie i Twoich pracowników w ramach pakietu."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Panel administracyjny cPanel</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Łatwy i przejrzysty panel administracyjny polecany przez największe firmy informatyczne."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Konto pocztowe we własnej domenie</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki tej możliwości będziesz posiadał swój adres email zakończony nazwą domeny Twojej strony np. adres@nazwa_firmy.pl."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Przekierowanie poczty</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki tej opcji możesz przekierować dowolny adres e-mail na swoje nowe konto pocztowe."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Autoresponder</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Funkcja, która pozwoli Ci na ustawienie standardowych odpowiedzi na daną kategorię e-maili."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">AntySpam i Antywirus</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Funkcja, która uniemożliwi przesyłanie na Twoją skrzynkę pocztową wiadomości typu SPAM oraz zawierających uciążliwe wirusy."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Dostęp przez WWW</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki tej opcji posiadasz dostęp do swego konta pocztowego zarówno poprzez menadżera poczty jak i przeglądarkę WWW."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Dostęp przez POP3/SMTP</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Protokoły umożliwiają pobieranie wiadomości z serwera do menadżera pocztowego typu: Thunderbird lub Microsoft Outlook."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Dostęp przez IMAP</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="IMAP pozwala na ściągnięcie nagłówków wiadomości i wybranie, które z wiadomości chcemy ściągnąć na komputer lokalny. Pozwala na wykonywanie wielu operacji, zarządzanie folderami i wiadomościami."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Multipoczta</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki opcji multipoczty użytkownik ma możliwość w ramach jednego serwera zakładania wielu kont  o tej samej nazwie, lecz na różnych domenach."/></div>
+
+
+
+            <div class="pra_of">Parametry WWW:</div>
+
+
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Subdomeny</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Możesz tworzyć dodatkowe subdomeny w ramach jednej witryny."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Harmonogram działań CRON</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki CRON-owi możesz zaplanować wykonanie swoich działań z wyprzedzeniem, natomiast one zostaną aktywowane w wybranym przez Ciebie momencie."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Certyfikat SSL dla subdomeny</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Szyfrowanie danych protokołem SSL zapewnia większe bezpieczeństwo przetwarzanych informacji."/></div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">Server Side Includes (SSI)</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Mechanizm skryptowy służący do dynamicznego generowania stron WWW na serwerze WWW."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Dziennik serwera</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Za pośrednictwem dziennika serwera użytkownik może monitorować aktywność i próby dostępu do serwera."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">SSH</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Protokół komunikacyjny używany w sieciach komputerowych TCP/IP, w architekturze klient-serwer."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Możliwość zabezpieczenia stron hasłem</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dzięki tej możliwości użytkownik może zabezpieczyć część serwera hasłem, przed niepowołanym dostępem."/></div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Codzienna kopia zapasowa</div><div class="ilosc_tek">Tak</div>
+
+                </div><div class="daneimg"><img src="{{ STATIC_URL }}images/info.png" alt="Info" class="tooltip" title="Dane przechowywane na serwerze Safeserver.pl podlegają codziennej kopii zapasowej, dzięki czemu nasi pracownicy w każdej chwili mogą odzyskać utracone dane."/></div>
+
+
+
+        </div>
+
+
+
+    <div class="skrypty_oferty">
+
+
+
+            <div class="pra_of">Języki skryptów:</div>
+
+
+
+                <div class="danetech">
+
+                    <div class="dan_tek">PHP 5</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">PERL 5</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">C</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech2">
+
+                    <div class="dan_tek">C++</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">XML</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Python</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+                </div>
+
+                <div class="danetech">
+
+                    <div class="dan_tek">Mod_rewrite</div><div class="ilosc_tek2"><img src="{{ STATIC_URL }}images/chackeded.png" alt="Akceptuję" title="Akceptuję"/></div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+            <div class="tresci_podpis">
+
+
+
+                Bezpieczeństwo danych to dla nas jeden z priorytetów. Dlatego każdemu klientowi zapewniamy dostęp do codziennej i cotygodniowej kopii zapasowej.
+
+
+
+            </div>
+
+
+
+            <div class="tresci_podpis2">
+
+
+
+               <div class="zdjecia_imgig"><img src="{{ STATIC_URL }}images/klucze.png" alt="Opcje dodatkowe" title="Opcje dodatkowe"/></div>
+
+
+
+                <div class="dodatki_danetech"><span style="font-weight: bold;">To za mało?</span> Przejdź do następnego kroku aby dobrać opcje dodatkowe...</div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+            </div>
+
+
+
+            <div class="button_danetech">
+
+
+
+            <form method="POST" action ="." >
+
+                {% csrf_token %}
+
+                <input id="id_oferta" type="hidden" name="oferta" value="3">
+
+                <input id="id_cena" type="hidden" value="289.0" name="cena">
+
+                <input class="butt_kliktan" type="submit" value="">
+
+            </form>
+
+
+
+            </div>
+
+
+
+
+
+
+
+{% endblock %}

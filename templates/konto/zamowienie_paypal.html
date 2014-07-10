@@ -1,0 +1,111 @@
+{% extends "base_layout.html" %}
+
+{% load l10n %}
+
+{% load tz %}
+
+
+
+{%  block title %}
+
+    Oczekiwanie na płatność PayPal
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="column_cont_wrapper">
+
+        <div class="oferta_teraz">
+
+            <div class="breadcrumbs">
+
+                <a href="{% url home_index %}">Strona Główna</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a href="{% url konto_index %}" rel="nofollow" title="Rejestracja konta klienta">Konto klienta</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a class="on" href="." rel="nofollow" title="Realizacja zamówienia" >Realizacja zamówienia</a>
+
+            </div>
+
+            <h2>Kliknij przycisk płatności elektronicznej</h2>
+
+        </div>
+
+        <div class="oferta_teraz2">
+
+            <div class="column_center">
+
+                <div id="przypom">
+
+                    <p>
+
+                        Aby przejść do płatności. Kliknij przycisk PayPal.
+
+                    </p>
+
+                    <div class="dodatki_pliki">
+
+
+
+
+
+                                        <div class="paypal_realizujj">
+
+                                            <div class="paypal_realizujj2">
+
+                                                <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+
+                                                    {% csrf_token %}
+
+                                                    <input id="id_business" type="hidden" value="biuro@2strefa.pl" name="business">
+
+                                                    <input id="id_amount" type="hidden" value="{{ suma_brutto|unlocalize }}" name="amount">
+
+                                                    <input id="id_item_name" type="hidden" value="{{ pay_nazwa }}" name="item_name">
+
+                                                    <input id="id_notify_url" type="hidden" value="http://safeserver.pl/moj_ipn/" name="notify_url">
+
+                                                    <input id="id_cancel_return" type="hidden" value="http://safeserver.pl/konto_klienta/platnosc_paypal_odrzucona/" name="cancel_return">
+
+                                                    <input id="id_return_url" type="hidden" value="http://safeserver.pl/konto_klienta/platnosc_paypal_zaakceptowana/" name="return">
+
+                                                    <input id="id_invoice" type="hidden" value="SAF#0{{ idt }}/{{ data_ter|date:"Y"  }}" name="invoice">
+
+                                                    <input id="id_cmd" type="hidden" value="_xclick" name="cmd">
+
+                                                    <input id="id_charset" type="hidden" value="utf-8" name="charset">
+
+                                                    <input id="id_currency_code" type="hidden" value="PLN" name="currency_code">
+
+                                                    <input id="id_no_shipping" type="hidden" value="1" name="no_shipping">
+
+                                                    <input type="image" value="" src="https://www.paypal.com/pl_PL/i/btn/x-click-but6.gif" border="0" name="submit" width="150" height="52" alt="Dokonaj płatności PayPal.">
+
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                    </div>
+
+                    Teraz możesz przejść do <a href="{% url konto_index %}">Swojego konta</a> i wydrukowac fakturę zakupu.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

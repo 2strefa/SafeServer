@@ -1,0 +1,133 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Weryfikacja klienta{% endblock %}
+
+
+
+{% block description %}Jeżeli posiadasz już kontro, to się zaloguj, jeżeli nie to możesz w każdej chwili je założyć.{% endblock %}
+
+
+
+{% block content %}
+
+        <div class="oferta_teraz">
+
+
+
+        <div class="ofert_ter"><span style="font-weight: bold;">Weryfikacja</span> - <span style="color: #8f8f8f;">klienta</span></div>
+
+
+
+        <div class="powrot_oferta"><a href="{% url hosting_index %}"><img src="{{ STATIC_URL }}images/powrot_oferta.png" alt="Powrót do oferty" title="Powrót do oferty hostingu" /></a></div>
+
+
+
+    </div>
+
+
+
+    <div class="oferta_teraz">
+
+
+
+        <div class="sciezka_center">
+
+
+
+            <div class="przciski_listy2">Specyfikacja serwera</div>
+
+            <div class="przciski_listy2">Dodatki</div>
+
+            <div class="przciski_listy">Weryfikacja klienta</div>
+
+            <div class="przciski_listy2">Płatność</div>
+
+            <div class="przciski_listy2">Podsumowanie</div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="boks_plikow">
+
+             <div class="alerty">
+
+
+
+            {{ form.non_field_errors }}
+
+
+
+            {{ form.login_panel.errors }}
+
+
+
+            {{ form.haslo_panel.errors }}
+
+
+
+            </div>
+
+    </div>
+
+        <div class="detale_oferty">
+
+            <div class="srodek_loginu">
+
+                <div class="bokses_l">
+
+                    <div class="tysked">ZAREJESTRUJ SIĘ</div>
+
+                    <div class="tekar">Jeżeli nie posiadasz konta w SafeServer - zarejestruj się.</div>
+
+
+
+                    <div class="butonner"><a href="/rejestracja/"><div class="buttrkak" type="submit" value=""></div></a>
+
+                </div>
+
+            </div>
+
+            <form id="login" action="." method="POST">
+
+            {% csrf_token %}
+
+                    <div class="bokses_r">
+
+                            <div class="tysked2">MASZ JUŻ KONTO?</div>
+
+                            <div class="tekarr">Jeżeli posiadasz już konto w SafeServer - zaloguj się.</div>
+
+                            <div class="dnkar">
+
+                                Login<span style="color: #ff0000;">*</span>:<br/>
+
+                                    <input class="input_klik44" id="id_login_panel" type="text" maxlength="264" name="login_panel"><br/>
+
+                                <span style="margin-top: 5px; float: left;">Hasło<span style="color: #ff0000;">*</span>:</span><br/>
+
+                                    <input class="input_klik44" id="id_haslo_panel" type="password" name="haslo_panel"><br/>
+
+                                <span style="color: #FF0000; float: right; font-size: 10px; margin-top: 5px;">* Pole wymagane</span>
+
+                            </div>
+
+                            <div class="butonner2"><input class="buttrkak2" type="submit" value=""></div>
+
+                    </div>
+
+            </form>
+
+        </div>
+
+        </div>
+
+{% endblock %}

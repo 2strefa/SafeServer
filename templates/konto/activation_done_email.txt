@@ -1,0 +1,9 @@
+Witaj.
+
+Dziękujemy za rejestrację na SafeServer.pl
+
+Twoje konto zostało aktywowane.
+
+Teraz możesz się zalogować.
+
+http://safeserver.pl/login

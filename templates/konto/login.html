@@ -1,0 +1,47 @@
+{% extends "base_layout.html" %}
+
+{%  block title %}
+
+    Logowanie na konto
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="oferta_teraz">
+
+        <div class="ofert_ter">Logowanie na konto</div>
+
+    </div>
+
+    <div class="oferta_teraz22">
+        <form id="login" action="." method="POST">
+
+            {% csrf_token %}
+
+                <div class="alerty">
+
+                    {{ form.non_field_errors }}
+
+                    {{ form.login_panel.errors }}
+                    {{ form.haslo_panel.errors }}
+
+                </div>
+            <div class="klasyk_login2">
+                <div class="bokses_r">
+                        <div class="tysked2">MASZ JUŻ KONTO?</div>
+                        <div class="tekarr">Jeżeli posiadasz już konto w SafeServer - zaloguj się.</div>
+                        <div class="dnkar">
+                            Login<span style="color: #ff0000;">*</span>:<br/>
+                            <input class="input_klik44" id="id_login_panel" type="text" maxlength="264" name="login_panel"><br/>
+                            <span style="margin-top: 5px; float: left;">Hasło<span style="color: #ff0000;">*</span>:</span><br/>
+                            <input class="input_klik44" id="id_haslo_panel" type="password" name="haslo_panel"><br/>
+                            <span style="margin-right: 45px; color: #FF0000; float: right; font-size: 10px; margin-top: 5px;">* Pole wymagane</span>
+                        </div>
+                        <div class="butonner2"><input class="buttrkak2" type="submit" value=""></div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

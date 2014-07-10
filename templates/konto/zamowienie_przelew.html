@@ -1,0 +1,93 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Oczekiwanie na przelew bankowy{% endblock %}
+
+
+
+{% block description %}Zamówienie zostało pomyślnie złożone. Pozostało jedynie dokonać płatności na wskazany rachunek bankowy.{% endblock %}
+
+
+
+{% block content %}
+
+    <div id="column_cont_wrapper">
+
+        <div class="oferta_teraz">
+
+            <div class="breadcrumbs">
+
+                <a href="{% url home_index %}">Strona Główna</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a href="{% url konto_index %}" rel="nofollow" title="Rejestracja konta klienta">Konto klienta</a>
+
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+
+                <a class="on" href="." rel="nofollow" title="Realizacja zamówienia" >Realizacja zamówienia</a>
+
+            </div>
+
+            <h2>Oczekiwanie na przelew bankowy</h2>
+
+        </div>
+
+        <div class="oferta_teraz2">
+
+            <div class="column_center">
+
+                <div id="przypom">
+
+                    <p>
+
+                        Dziękujemy za wybór naszej oferty. W przeciągu 24 godzin od zaksięgowania środków na koncie, Twój serwer zostanie uruchomiony.<br/> Życzymy miłej współpracy z SafeServer.pl<br/>
+
+                        <span style="font-weight: bold;">Przelew należy wykonać na poniższe dane.</span>
+
+                    </p>
+
+                    <div class="dodatki_pliki">
+
+                                <div class="dane_loginn">
+
+                                    <div class="dane_albi">
+
+                                        <div class="dane_projkk2">
+
+                                            <div class="danke">Nazwa firmy :</div> <span style="font-weight: bold; float: left;">Agencja Projektowo-Usługowo-Reklamowa '2 STREFA' Albert Kowalewski</span> <br/>
+
+                                            <div class="danke">Adres :</div> <span style="font-weight: bold; float: left;">ul. Jarzębinowa 24/6</span> <br/>
+
+                                            <div class="danke">Kod pocztowy :</div> <span style="font-weight: bold; float: left;">15-793 Białystok</span> <br/>
+
+                                            <div class="danke">NIP :</div> <span style="font-weight: bold; float: left;">542-272-14-34</span> <br/>
+
+                                            <div class="danke">REGON :</div> <span style="font-weight: bold; float: left;">200248188</span> <br/>
+
+                                            <div class="danke">Bank ING :</div> <span style="font-weight: bold; float: left;">93 1050 1823 1000 0090 6564 6151</span> <br/>
+
+                                            <!--<div class="danke">SWIFT :</div> <span style="font-weight: bold; float: left;">INGBPLPW</span> <br/>-->
+
+                                            <div class="danke">Tytuł przelewu :</div> <span style="font-weight: bold; float: left;">Opłata za zamówienie nr. {{ numer_dane }} z dnia {{ data_zami }}r.</span> <br/>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                    </div>
+
+                    Teraz możesz przejść do <a href="{% url konto_index %}">Swojego konta</a> i wydrukować fakturę zakupu.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

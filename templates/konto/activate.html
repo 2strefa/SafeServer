@@ -1,0 +1,36 @@
+{% extends "base_layout.html" %}
+{%  block title %}
+    Aktywacja konta
+{% endblock %}
+{% block content %}
+        <div class="oferta_teraz">
+            <div class="breadcrumbs">
+                <a href="{% url home_index %}">Strona Główna</a>
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+                <a href="{% url registration_register %}" rel="nofollow" title="Rejestracja konta klienta">Rejestracja</a>
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+                <a href="{% url registration_end %}" rel="nofollow" title="Rejestracja zakończona na Hotness.pl">Zakończona</a>
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+                <a class="on" href="." rel="nofollow" title="Aktywacja konta na Hotness.pl" >Aktywacja konta</a>
+            </div>
+            <h2>Aktywacja konta: {% if account %}Zakończona pomyślnie.{% else %}Nie powiodła się.{% endif %}</h2>
+        </div>
+        <div class="oferta_teraz2">
+            <div class="column_center">
+                <div id="przypom">
+                    {% if account %}
+                        <p>
+                            Twoje konto jest już aktywne. Możesz odwiedzić swój
+                            <a href="{% url login_index %}">profil użytkownika</a> i przejść do zakupów.
+                        </p>
+                    {% else %}
+
+                        <p>
+                            Coś poszło nie tak. Spróbuj skopiować link aktywacyjny jeszcze raz i upewnij się,
+                            że nie posiada on nigdzie przełamanych linii bądź oddzielających spacji. <br/><span class="bold">Link aktywacyjny, może być wykorzystany tylko raz do aktywacji profilu.</span>
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+{% endblock %}

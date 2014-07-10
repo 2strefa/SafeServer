@@ -1,0 +1,27 @@
+{% extends "base_layout.html" %}
+{%  block title %}
+    Płatność PayPal odrzucona
+{% endblock %}
+{% block content %}
+    <div id="column_cont_wrapper">
+        <div class="oferta_teraz">
+            <div class="breadcrumbs">
+                <a href="{% url home_index %}">Strona Główna</a>
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+                <a href="{% url konto_index %}" rel="nofollow" title="Rejestracja konta klienta">Konto klienta</a>
+                <img src="{{ STATIC_URL }}images/breadcrumbs_arrow.png" alt="Breadcrumbs"/>
+                <a class="on" href="{% url paypal_odrzucona_index %}" rel="nofollow" title="Akceptacja płatności" >Płatność odrzucona</a>
+            </div>
+            <h2>Płatność PayPal odrzucona</h2>
+        </div>
+        <div class="oferta_teraz2">
+            <div class="column_center">
+                <div id="przypom">
+                    <p>
+                        Twoja płatność została odrzucona. Z przykrością nie możemy zrealizować Twojej platności. Sprawdź stan Swojego konta, badź zrealizuj ponownie zamówienie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

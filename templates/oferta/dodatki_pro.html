@@ -1,0 +1,409 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}Dodatki Professional{% endblock %}
+
+
+
+{% block description %}Dodatki Professional do pakietu hostingu, który spełni wszelkie oczekiwania każdego informatyka{% endblock %}
+
+
+
+{% block content %}
+
+
+
+
+
+
+
+    <div class="oferta_teraz">
+
+
+
+
+
+
+
+        <div class="ofert_ter">Serwer <span style="font-weight: bold;">PROFESSIONAL</span> - <span style="color: #8f8f8f;">dodatki</span></div>
+
+
+
+
+
+
+
+        <div class="powrot_oferta"><a href="{% url hosting_index %}"><img src="{{ STATIC_URL }}images/powrot_oferta.png" alt="Powrót do oferty" title="Powrót do oferty hostingu" /></a></div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="oferta_teraz">
+
+
+
+
+
+
+
+        <div class="sciezka_center">
+
+
+
+
+
+
+
+            <div class="przciski_listy2">Specyfikacja serwera</div>
+
+
+
+            <div class="przciski_listy">Dodatki</div>
+
+
+
+            <div class="przciski_listy2">Weryfikacja klienta</div>
+
+
+
+            <div class="przciski_listy2">Płatność</div>
+
+
+
+            <div class="przciski_listy2">Podsumowanie</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="boks_plikow">
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="detale_oferty">
+
+
+
+
+
+
+
+    <div class="nazwa_oferty_dodat">
+
+
+
+        <span style="font-weight: bold;font-size: 15px;">Wybór opcji dodatkowych do serwera PROFESSIONAL</span><br/>
+
+
+
+        Dodatkowe opcje zapewnią większą funkcjonalność Twoim serwisom.
+
+
+
+    </div>
+
+
+
+
+
+
+
+        <div class="cenaaa_ter"><span style="font-weight: bold;font-size: 15px;">Cena</span></div>
+
+
+
+
+
+
+
+        <form id="dodatek_wlasny" method="POST" action ="." >
+
+
+
+            {% csrf_token %}
+
+
+
+            {{ items.non_field_errors }}
+
+
+
+            {{ items.pik.errors }}
+
+
+
+            {{ formt2.non_field_errors }}
+
+
+
+            {{ formt2.dodatki.errors }}
+
+
+
+            {{ formt2.amount.errors }}
+
+
+
+            {{ formt2.total_amount.errors }}
+
+
+
+                        <div class="dodatki_pliki">
+
+
+
+                            <div class="lewy_dodatek" id="mikoo">{{ items.pik }}</div>
+
+
+
+                            <div class="prawy_dodatek">
+
+
+
+                                <ul>
+
+
+
+                                        {% for e in qter %}
+
+
+
+                                    <li>{{e.cena_netto}} zł / rok</li>
+
+
+
+                                        {% endfor %}
+
+
+
+                                </ul>
+
+
+
+                            </div>
+
+
+
+                        <div class="podsumowanie">
+
+
+
+                            <div class="podsum_stylkit">Prezentowane ceny nie zawierają podatku VAT</div>
+
+
+
+                        </div>
+
+
+
+                        <div class="cena_koncowa">
+
+
+
+                            <div class="podsumowaniecenowestyl">
+
+
+
+                                <div class="podsumowaniecenowe_styl2">
+
+
+
+                                    <ul>
+
+
+
+                                        <li style="font-weight: bold; font-size: 15px; color: #000000;" id="starter_cena" value="475.00">475,00 zł netto</li>
+
+
+
+                                    </ul>
+
+
+
+                                        <ul id="cenkii" style="font-size: 12px; color: #000000;"></ul>
+
+
+
+
+
+
+
+                                </div>
+
+
+
+                                <div class="podsumowaniecenowe_styl">
+
+
+
+                                    <span style="text-transform: uppercase; font-weight: bold;"> Abonament roczny za serwer PROFESSIONAL</span><br/>
+
+
+
+
+
+
+
+                                        <ul id="okiter" style="color: #2963bb;"></ul><br/>
+
+
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                            <div class="podsumowaniecenowestyl3">
+
+
+
+                                <div class="podsumowaniecenowe_styl22">
+
+
+
+                                    <input id="id_dodatki" type="hidden" name="dodatki" value="0">
+
+
+
+                                    <ul id="vat_suma" style="font-size: 11px;">
+
+
+
+                                        <li value="109.25" name="vat_ter">109.25 zł podatku</li>
+
+
+
+                                    </ul>
+
+
+
+                                    <input id="id_amount" type="hidden" name="amount" value="115">
+
+
+
+                                    <input id="id_total_amount" type="hidden" name="total_amount" value="584.25">
+
+
+
+                                        <ul id="razem_suma" style="font-weight: bold; font-size: 14px; color: #000000;">
+
+
+
+                                            <li name="razem_ter">584.25 zł brutto</li>
+
+
+
+                                        </ul>
+
+
+
+                                </div>
+
+
+
+                                <div class="podsumowaniecenowe_styl33">
+
+
+
+                                    <span style="font-size: 12px; color: #888888;">+ 23% VAT</span><br/>
+
+
+
+                                    <span style="text-transform: uppercase; font-weight: bold;"> RAZEM</span><br/>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+            <div class="button_danetech">
+
+
+
+                <input class="butt_kliktan" type="submit" value="">
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </form>
+
+
+
+ </div>
+
+
+
+{% endblock %}

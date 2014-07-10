@@ -1,0 +1,2466 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+
+    font-family: 'CenturyGothic_new';
+    src: url('fonts/CenturyGothic.eot');
+    src: local('Century Gothic'),
+    url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CenturyGothic.woff') format('woff'),
+    url('fonts/CenturyGothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-variant: normal;
+
+    font-family: 'fontello';
+    src: url('fonts/fontello.eot');
+    src: local('Fontello'),
+    url('fonts/fontello.eot?#iefix') format('embedded-opentype'),
+    url('fonts/fontello.woff') format('woff'),
+    url('fonts/fontello.ttf') format('truetype');
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-variant: normal;
+
+    font-family: 'CenturyGothic_new';
+    src: url('fonts/CenturyGothic-Bold.eot');
+    src: local('Century Gothic'),
+    url('fonts/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CenturyGothic-Bold.woff') format('woff'),
+    url('fonts/CenturyGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+
+    font-family: 'MyriadPro-Cond';
+    src: url('fonts/MyriadPro-Cond.eot');
+    src: local('Myriad Pro Cond'),
+    url('fonts/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+    url('fonts/MyriadPro-Cond.woff') format('woff'),
+    url('fonts/MyriadPro-Cond.ttf') format('truetype');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+form {
+    display: inline;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    outline: none;
+    cursor: pointer;
+}
+
+a img {
+    border: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #3C3A3E;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    color: #2B2B2B;
+}
+
+input, select {
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+}
+
+div.clear {
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+html.konto {
+    background-color: #2e2c30;
+}
+
+#page_wrapper_konto {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
+}
+
+#top_wrapper_konto {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 97px;
+    background: url(../images/konto/top_konto.png) repeat-x 0 0;
+    z-index: 100;
+}
+
+#top_main_konto {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+#main_wrapper_konto {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+#main_konto {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+}
+.logo_hotness{
+    width: 135px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+.tytul_strony{
+    width: 510px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    font-size: 20px;
+}
+.tytul_nazwa{
+    width: 136px;
+    height: auto;
+    margin: 10px auto 20px;
+    color: #ffffff;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    font-size: 17px;
+}
+
+.tytul_nazwa2{
+    width: 500px;
+    height: auto;
+    margin: 10px auto 20px;
+    color: #ffffff;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    font-size: 17px;
+    text-align: center;
+}
+
+.lista_logowania{
+    width: 124px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    font-size: 17px;
+}
+.baton_wejscie{
+    background: url("../images/konto/zaloguj.png") no-repeat scroll 0 0 transparent;
+    width: 124px;
+    height: 28px;
+    border: 0;
+    cursor: pointer;
+}
+
+.baton_wejscie:hover{
+    background-position: 0 -29px;
+}
+
+.formy_logowania{
+    width: 313px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #ffffff;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    font-size: 17px;
+}
+
+.formy_logowania input{
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 66px;
+    width: 240px;
+    font-size: 20px;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.formy_logowania label{
+    color: #3C3A3E;
+    margin-left: 8px;
+    margin-top: 12px;
+    position: absolute;
+}
+.przypomnienie_hasla{
+    float: right;
+    font-size: 12px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: -4px;
+    width: auto;
+}
+
+.przypomnienie_hasla a{
+    color: #8f8b8b;
+    text-decoration: none;
+}
+
+.przypomnienie_hasla a:hover{
+    text-decoration: underline;
+}
+
+.errors_login{
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: #dc1f1f;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.baton_reset{
+    background: url("../images/konto/reset.png") no-repeat scroll 0 0 transparent;
+    width: 124px;
+    height: 28px;
+    border: 0;
+    cursor: pointer;
+}
+
+.baton_reset:hover{
+    background-position: 0 -29px;
+}
+
+
+
+
+
+
+/* ----------------------------------------------- KONTO KLIENTA ----------------------------------------------- */
+html.konto {
+    background-color: #3C3A3E;
+}
+
+#page_wrapper_konto {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    max-width: 1903px;
+    font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
+}
+
+#top_wrapper_konto {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 97px;
+    background: url(../images/konto/top_konto.png) repeat-x 0 0;
+    z-index: 100;
+}
+
+#top_main_konto {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+#main_wrapper_konto {
+    width: 1130px;
+    margin: 0 auto;
+}
+
+#main_konto {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+
+/* -----------> TOP <----------- */
+
+#main_link_konto {
+    display: inline;
+    float: left;
+    width: 135px;
+    height: 65px;
+    margin-top: 10px;
+}
+
+#main_link_konto a{
+    display: inline;
+    float: left;
+    width: 135px;
+    height: 65px;
+}
+
+#top_right_konto {
+    display: inline;
+    float: right;
+    height: 45px;
+    margin: 22px 10px 22px 0;
+}
+
+#top_zamow_konto, #top_sprzed_konto, #top_saldo_konto {
+    display: inline;
+    float: left;
+    margin: 2px 0 0 25px;
+}
+
+#top_right_konto .left {
+    display: inline;
+    float: left;
+    width: 28px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 15px;
+    padding-top: 28px;
+}
+
+#top_right_konto .right {
+    display: inline;
+    float: left;
+    margin-left:10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #fff;
+}
+
+#top_right_konto .right span {
+    clear: both;
+    display: inline;
+    float: left;
+}
+
+#top_right_konto .ico {
+    display: inline;
+    float: left;
+    margin-left:10px;
+}
+
+
+#top_zamow_konto .left {
+    background: url(../images/konto/zamow_ico.png) no-repeat center 0;
+}
+
+#top_sprzed_konto .left {
+    background: url(../images/konto/sprzed_ico.png) no-repeat center 0;
+}
+
+#top_saldo_konto .left {
+    background: url(../images/konto/saldo_ico.png) no-repeat center 0;
+}
+
+#top_zamow_konto .name {
+    color: #99d9fc;
+}
+
+#top_sprzed_konto .name {
+    color: #f7a60a;
+}
+
+#top_saldo_konto .name {
+    color: #70c106;
+}
+
+/* ----------->> TOP - MENU <<----------- */
+#top_menu_konto {
+    display: inline;
+    float: left;
+    height: 36px;
+    margin-left: 25px;
+    font-size: 12px;
+    text-shadow: 0px -1px #121213;
+}
+
+#top_menu_konto ul, #top_menu_konto li {
+    display: inline;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+}
+
+#top_menu_konto li a, #top_menu_konto span {
+    display: inline;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+}
+
+
+#top_menu_konto ul {
+    background: url(../images/konto/menu_bg.png) repeat-x 0 0;
+    border-radius: 0 8px 8px 0;
+}
+
+#top_menu_konto li {
+    padding-left: 1px;
+    background: url(../images/konto/menu_break.png) no-repeat 0 0;
+    border-radius: 0 8px 8px 0;
+}
+
+#top_menu_konto li a {
+    padding: 0 12px;
+    color: #9f9da3;
+}
+
+#top_menu_konto li.on a, #top_menu_konto li a:hover {
+    color: #fff;
+    background: url(../images/konto/menu_bg_on.png) repeat-x 0 0;
+}
+
+#top_menu_konto .klient {
+    padding: 0 12px;
+    background: url(../images/konto/menu_left.png) no-repeat 0 0;
+    color: #9f9da3;
+}
+
+#top_menu_konto .klient a {
+    float: none;
+    background: none;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    padding: 0;
+}
+
+#top_menu_konto .klient a:hover {
+    background: none;
+    text-decoration: underline;
+}
+
+#top_menu_konto .pomoc a span {
+    padding-left: 20px;
+    background: url(../images/konto/menu_pomoc.png) no-repeat 0 center;
+}
+
+#top_menu_konto li.pomoc.on a span, #top_menu_konto .pomoc a:hover span {
+    background: url(../images/konto/menu_pomoc_on.png) no-repeat 0 center;
+}
+
+#top_menu_konto .wylog a {
+    padding-right: 0;
+}
+
+#top_menu_konto .wylog a span.menu_right {
+    padding-right: 12px;
+    color: #ffffff;
+}
+
+#top_menu_konto .wylog a span.menu_right span {
+    padding-left: 20px;
+    background: url(../images/konto/menu_wylog.png) no-repeat 0 center;
+}
+
+#top_menu_konto li.wylog.on a span.menu_right span, #top_menu_konto .wylog a:hover span.menu_right span {
+    background: url(../images/konto/menu_wylog_on.png) no-repeat 0 center;
+}
+
+#top_menu_konto .wylog.on a span.menu_right, #top_menu_konto .wylog a:hover span.menu_right {
+    background: url(../images/konto/menu_right_on.png) no-repeat right 0;
+}
+
+#top_menu_konto .mail a {
+    padding: 0 15px 0 17px;
+}
+
+#top_menu_konto .mail a span.txt {
+    position: relative;
+    padding-left: 18px;
+    background: url(../images/konto/menu_mail.png) no-repeat 0 center;
+}
+
+#top_menu_konto .mail.on a span.txt, #top_menu_konto .mail a:hover span.txt {
+    background: url(../images/konto/menu_mail_on.png) no-repeat 0 center;
+}
+
+#top_menu_konto .mail a span.powiad {
+    position: absolute;
+    top: 5px;
+    left: -12px;
+    width: 17px;
+    height: 14px;
+    background: url(../images/konto/menu_powiad.png) no-repeat 0 0;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+}
+/* ----------->> END TOP - MENU <<----------- */
+
+/* -----------> END TOP <----------- */
+
+/* -----------> COLUMN LEFT <----------- */
+#col_left_konto {
+    display: inline;
+    float: left;
+    margin-top: 112px;
+    width: 232px;
+}
+
+/* ----------->> WYSZUKIWARKA <<----------- */
+#find_konto {
+    display: inline;
+    float: left;
+    width: 199px;
+    height: 59px;
+    margin-left: 17px;
+    background: url(../images/konto/saldo.png) no-repeat 0 0;
+}
+
+#find_konto .submit {
+    display: inline;
+    float: left;
+    width: 34px;
+    height: 42px;
+}
+
+#find_konto .submit input {
+    float: left;
+    display: inline;
+    width: 19px;
+    height: 19px;
+    margin: 11px 0 0 15px;
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#find_konto .input {
+    display: inline;
+    float: left;
+    width: 156px;
+    height: 42px;
+}
+
+#find_konto .input input {
+    float: left;
+    display: inline;
+    width: 136px;
+    height: 32px;
+    padding: 5px 10px;
+    border: 0;
+    background: none;
+    color: #2e2c30;
+    font-size: 12px;
+    outline: none;
+    line-height: 32px;
+}
+/* ----------->> END WYSZUKIWARKA <<----------- */
+
+
+/* ----------->> MENU <<----------- */
+#menu_konto {
+    display: inline;
+    float: left;
+    margin-top: 12px;
+    width: 232px;
+    border-top: 1px solid #242326;
+}
+
+#menu_konto ul {
+    display: inline;
+    float: left;
+    width: 232px;
+}
+
+#menu_konto ul li {
+    position: relative;
+    display: block;
+    float: left;
+    width: 232px;
+    background: url(../images/konto/menu.png) repeat-x 0 0;
+}
+
+#menu_konto ul li a, #menu_konto ul li span {
+    display: block;
+    float: left;
+    width: 192px;
+    height: 42px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 42px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#menu_konto ul li.on {
+    background: url(../images/konto/menu_on.png) repeat-x 0 0;
+}
+
+#menu_konto ul li a:hover {
+    text-decoration: underline;
+}
+
+#menu_konto ul li ul li {
+    background: url(../images/konto/menu_lvl2.png) repeat-x 0 0;
+}
+
+#menu_konto ul li ul {
+    display: none;
+}
+
+#menu_konto ul li ul li a {
+    font-weight: normal;
+    text-transform: none;
+}
+
+#menu_konto ul li ul li.on {
+    background: url(../images/konto/menu_lvl2.png) repeat-x 0 0;
+}
+
+#menu_konto ul li ul li.on a {
+    font-weight: bold;
+    color: #51beed;
+}
+
+#menu_konto .inf_ogu {
+    background: url(../images/konto/menu_inf_ogo.png) no-repeat 11px center;
+}
+
+#menu_konto .inf_kli {
+    background: url(../images/konto/info.png) no-repeat 11px center;
+}
+
+#menu_konto .zam {
+    background: url(../images/konto/menu_zam.png) no-repeat 11px center;
+}
+
+#menu_konto .kli {
+    background: url(../images/konto/menu_kli.png) no-repeat 11px center;
+}
+
+#menu_konto .pro {
+    background: url(../images/konto/menu_pro.png) no-repeat 11px center;
+}
+
+#menu_konto .two_opi {
+    background: url(../images/konto/menu_two_opi.png) no-repeat 11px center;
+}
+
+#menu_konto .two_pla {
+    background: url(../images/konto/menu_two_pla.png) no-repeat 11px center;
+}
+
+#menu_konto .ust {
+    background: url(../images/konto/menu_ust.png) no-repeat 11px center;
+}
+
+/* ----------->> END MENU <<----------- */
+
+/* -----------> END COLUMN LEFT <----------- */
+
+/* -----------> COLUMN RIGHT <----------- */
+#col_right_konto {
+    position: absolute;
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top:  100px;
+}
+
+#content_bg_konto {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    display: inline;
+    float: left;
+    width: 100%;
+    z-index: 5;
+    margin-left: 10px;
+    padding-bottom: 40px;
+}
+
+#content_top_konto, #content_konto, #content_bottom_konto {
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#content_top_konto {
+    height: 8px;
+    background: url(../images/konto/content_konto_top.png) no-repeat 0 0;
+}
+
+#content_bottom_konto {
+    height: 8px;
+    background: url(../images/konto/content_konto_bottom.png) no-repeat 0 0;
+}
+
+#content_konto {
+    width: 96%;
+    min-height: 600px;
+    height: auto;
+    padding: 12px 25px 17px 20px;
+}
+
+#header_konto {
+    font-family: 'Century Gothic', CenturyGothic_new;
+    font-size: 24px;
+    font-weight: bold;
+    color: #37343b;
+    line-height: 40px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#info_top_konto {
+    display: inline;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+
+/* ----------->> COLUMN RIGHT  BREADCRUMBS <<----------- */
+#breadcrumbs_konto {
+    float: left;
+    display: inline;
+    line-height: 26px;
+    font-size: 11px;
+    color: #5b585f;
+    margin-left: 15px;
+}
+
+#breadcrumbs_konto a {
+    float: left;
+    display: inline;
+    color: #5b585f;
+    text-decoration: none;
+    text-shadow: 0px 1px #fff;
+}
+
+#breadcrumbs_konto a:hover{
+    text-decoration: underline;
+}
+
+#breadcrumbs_konto .home {
+    padding-left: 20px;
+    width: auto;
+    margin: 0;
+    background: url(../images/konto/bread_home.png) no-repeat 0 center;
+}
+
+#breadcrumbs_konto span.home {
+    font-weight: bold;
+}
+
+#breadcrumbs_konto a.on {
+    font-weight: bold;
+}
+
+#breadcrumbs_konto span {
+    float: left;
+    display: inline;
+    width: 4px;
+    height: 26px;
+    margin: 0 8px;
+    background: url(../images/konto/bread_arrow.png) no-repeat 0 center;
+    text-shadow: 0px 1px #fff;
+}
+
+#breadcrumbs_konto span.on, #breadcrumbs_konto span.break2 {
+    color: #5b585f;
+    font-weight: bold;
+    width: auto;
+    background: none;
+}
+
+#breadcrumbs_konto span.on {
+    margin: 0;
+}
+/* ----------->> END COLUMN RIGHT  BREADCRUMBS <<----------- */
+
+
+#data_konto {
+    float: right;
+    display: inline;
+    line-height: 26px;
+    font-size: 11px;
+    color: #5b585f;
+    margin-right: 15px;
+}
+
+/* ----------->> COLUMN RIGHT  NAGŁÓWEK <<----------- */
+#content_konto .naglowek_konto {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#content_konto .naglowek_bg_konto {
+    display: inline;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    background-color: #eeeeee;
+    font-size: 12px;
+    color: #656268;
+    padding: 0 5px;
+    background: url(../images/konto/naglowek_bg_konto.png) repeat-x 0 0;
+}
+
+#content_konto .naglowek_left_konto {
+    display: inline;
+    float: left;
+    height: 36px;
+    padding-left:10px;
+    background: url(../images/konto/naglowek_left_konto.png) no-repeat 0 0;
+}
+
+#content_konto .naglowek_right_konto {
+    display: inline;
+    float: left;
+    height: 36px;
+    padding-right:10px;
+    background: url(../images/konto/naglowek_right_konto.png) no-repeat right 0;
+}
+
+#content_konto .naglowek_konto span {
+    padding-left: 25px;
+    text-shadow: 0px 1px #fff;
+}
+
+#content_konto .naglowek_konto span.dane {
+    background: url(../images/konto/dane_tele.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.platnosc {
+    background: url(../images/konto/platnosc.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.koszt_wysy {
+    background: url(../images/konto/koszt_wysy.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.logotyp {
+    background: url(../images/konto/logotyp.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.ostat_zamow {
+    background: url(../images/konto/ostat_zamow.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.staty {
+    background: url(../images/konto/staty.png) no-repeat 0 center;
+}
+
+#content_konto .naglowek_konto span.zamowienias {
+    padding: 0;
+}
+
+#content_konto .naglowek_konto a.wszystkie {
+    display: inline;
+    float: right;
+    width: 122px;
+    height: 28px;
+    margin: 4px 0;
+    background: url(../images/konto/wszystkie.png) no-repeat 0 0;
+}
+
+#content_konto .naglowek_konto a.wszystkie:hover {
+    background-position: 0 -28px;
+}
+
+/* ----------->> END COLUMN RIGHT  NAGŁÓWEK <<----------- */
+
+#content_page_konto {
+    display: inline;
+    float: left;
+    padding: 15px;
+    margin-top: 1px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+}
+
+#content_page_konto .top_bg {
+    display: inline;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+
+}
+
+#content_page_konto .top {
+    display: inline;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #eae8e8;
+    font-size: 11px;
+    font-weight: bold;
+    color: #2e2c30;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+#content_page_konto .top a {
+    color: #3d81b8;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+#content_page_konto .top a:hover {
+    text-decoration: none;
+}
+
+#content_page_konto .top .red {
+    color: #c20524;
+}
+
+#content_konto .zapisz input {
+    display: inline-block;
+    width: 122px;
+    height: 28px;
+    border: none;
+    background: url(../images/konto/butt_zapisz.png) no-repeat 0 0;
+    cursor: pointer;
+}
+
+#content_konto .zapisz input:hover {
+    background-position: 0 -28px;
+}
+
+/* ----------->> COLUMN RIGHT  DANE KLIENTA  <<----------- */
+#dane_kli_kont #content_page_konto {
+    background-color: #f9f9f9;
+    border-color: #d4d1d7;
+}
+
+#dane_kli_kont .zapisz {
+    display: inline;
+    float: right;
+    padding: 4px 0;
+}
+
+#content_konto .form_line {
+    width: 500px;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+#content_konto label {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    color: #1d1d1d;
+    line-height: 32px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 130px;
+    text-align: left;
+}
+
+#content_konto .input {
+    display: inline;
+    float: right;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+#content_konto .input_l {
+    display: inline;
+    float: left;
+    width: 5px;
+    height: 32px;
+    background: url(../images/konto/form_left_konto.png) no-repeat 0 0;
+}
+
+#content_konto .input_r {
+    display: inline;
+    float: left;
+    width: 5px;
+    height: 32px;
+    background: url(../images/konto/form_right_konto.png) no-repeat 0 0;
+}
+
+#content_konto .input_bg {
+    display: inline;
+    float: left;
+    height: 32px;
+    background: url(../images/konto/form_bg_konto.png) repeat-x 0 0;
+}
+
+#content_konto .input_bg input {
+    float: left;
+    display: inline;
+    width: 325px;
+    height: 22px;
+    border: 0;
+    background: none;
+    padding: 5px 15px;
+    color: #2e2c30;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    outline: none;
+}
+
+#content_konto span.wymagane {
+    display: inline;
+    float: left;
+    width: 7px;
+    height: 32px;
+    background: url(../images/konto/form_wymag.png) no-repeat 0 center;
+}
+
+#content_konto span.info {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    color: #2e2c30;
+    line-height: 32px;
+    margin-left: 5px;
+}
+
+#dane_kli_kont label {
+    font-weight: bold;
+}
+/* ----------->> END COLUMN RIGHT - DANE KLIENTA <<----------- */
+
+/* ----------->> COLUMN RIGHT - PŁATNOŚCI  <<----------- */
+#platnosc_kont #content_page_konto .form_line {
+    width: 500px;
+    padding-top: 10px;
+}
+
+#platnosc_kont label {
+    margin-left: 20px;
+    width: 290px;
+}
+
+#platnosc_kont .check {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 5px 0 9px 10px;
+}
+
+#platnosc_kont .check.on {
+    background-position: 0 0;
+}
+
+#platnosc_kont .zapisz {
+    display: inline;
+    float: left;
+    width: 100%;
+    border-top: 1px solid #eae8e8;
+    padding: 20px 0 0 0;
+}
+
+#platnosc_kont .zapisz input {
+    margin-left: 20px;
+}
+
+/* ----------->> END COLUMN RIGHT - PŁATNOŚCI  <<----------- */
+
+/* ----------->> COLUMN RIGHT - KOSZT WYSYŁKI  <<----------- */
+#koszt_wysy_kont .info {
+    display: inline;
+    float: left;
+    width: 100%;
+    color: #1d1d1d;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eae8e8;
+    margin-bottom: 20px;
+}
+
+#koszt_wysy_kont .info li.wysylka {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 500px;
+}
+
+#koszt_wysy_kont .info .kurier {
+    display: inline;
+    float: left;
+    width: 320px;
+    margin-left: 20px;
+}
+
+#koszt_wysy_kont .info .cena {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+}
+
+#dodaj_opcje_konto {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 250px;
+}
+
+#dodaj_opcje_konto span {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    color: #2e2c30;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+#dodaj_opcje_konto input.dodaj {
+    width: 24px;
+    height: 24px;
+    background: url(../images/konto/butt_dodaj.png) no-repeat 0 0;
+    cursor: pointer;
+    border: 0 none;
+    float: left;
+}
+
+#dodaj_opcje_konto input.dodaj:hover {
+    background-position: 0 -24px;
+}
+
+#koszt_wysy_kont #content_page_konto .form_line {
+    width: 420px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #1d1d1d;
+    height: 32px;
+    line-height: 32px;
+}
+
+#koszt_wysy_kont .form_line .kurier {
+    display: inline;
+    float: left;
+    width: 320px;
+    margin-right: 15px;
+}
+
+#koszt_wysy_kont .form_line .cena {
+    display: inline;
+    float: left;
+}
+
+#koszt_wysy_kont .kurier .input_bg input {
+    width: 280px;
+}
+
+#koszt_wysy_kont .cena .input_bg input {
+    width: 50px;
+    padding: 5px 10px;
+}
+/* ----------->> COLUMN RIGHT - KOSZT WYSYŁKI  <<----------- */
+
+
+/* ----------->> COLUMN RIGHT - LOGO  <<----------- */
+#logotyp_kont .plik {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 600px;
+}
+
+#logotyp_kont .plik .wybierz {
+    display: inline;
+    float: left;
+    color: #1d1d1d;
+    font-family: Verdana, Geneva, 'Bitstream Vera Sans', 'DejaVu Sans', 'Liberation Sans', Kalimati ,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+#logotyp_kont .plik .file {
+    display: inline;
+    float: left;
+    line-height: 30px;
+    margin-left: 20px;
+}
+
+#logotyp_kont #upload {
+    padding-left: 10px;
+    line-height:30px;
+}
+
+#logotyp_kont .zapisz {
+    display: inline;
+    float: left;
+    margin: 1px 0 15px 20px;
+}
+
+/* ----------->>> COLUMN RIGHT - LOGO - FORM <<<----------- */
+/*Text inputs*/
+#logotyp_kont .NFText {width: 100%; height:30px; border:none; vertical-align:middle; font:12px Arial, Helvetica, sans-serif; color: #656268; background:none; padding: 0; line-height:30px;}
+#logotyp_kont .NFTextCenter {width:235px; height:30px; background:url(../images/konto/input_file/input-file.png) repeat-x 0 0; padding:0; margin:0; float:left; line-height:30px;}
+#logotyp_kont .NFTextLeft {width:10px; height:30px; vertical-align:middle; float:left; background:url(../images/konto/input_file/input-file-left.png) no-repeat 0 0;}
+/*Files*/
+#logotyp_kont .NFFileButton {padding-bottom:0; vertical-align:bottom; cursor:pointer; background:url(../images/konto/input_file/file.png) no-repeat 0 0; width:30px; height:30px;}
+#logotyp_kont .NFFile {position:relative;}
+#logotyp_kont .NFFile input.NFhidden {position:relative; filter:alpha(opacity=0); opacity:0; z-index:2; cursor:pointer; text-align:left; width: 280px; height:30px;}
+#logotyp_kont .NFFileNew {position:absolute; top:0px; left:0px; z-index:1;}
+/*Hidden*/
+#logotyp_kont .NFhidden {opacity:0; z-index:-1; position:relative;}
+/*Safari*/
+select, input, textarea, button {outline:none; resize:none;}
+/* ----------->>> END COLUMN RIGHT - LOGO - FORM <<<----------- */
+
+/* ----------->> END COLUMN RIGHT - LOGO <<----------- */
+
+
+/* ----------->> COLUMN RIGHT - INFORMACJE OGÓLNE <<----------- */
+
+#ost_zamow {
+    display: inline;
+    float: left;
+    width: 100%;
+}
+#ost_zamow #content_page_konto {
+    background-color: #f9f9f9;
+    border-color: #d4d1d7;
+}
+
+
+
+#ost_zamow li {
+    display: inline-block;
+    height: 70px;
+    font-size: 12px;
+    color: #37343b;
+    line-height: 70px;
+    border-top: 1px solid #fff;
+    margin: auto;
+}
+
+#ost_zamow li {
+    height: 70px;
+    padding: 0 ;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+#ost_zamow li a {
+    text-decoration: none;
+    color: #37343b;
+}
+
+#ost_zamow li a:hover {
+    color: #5f5a66;
+}
+
+#ost_zamow li.first {
+    height: 30px;
+    line-height: 30px;
+    border-top: 0;
+    border-color: #f0f0f0;
+}
+
+#ost_zamow li.first div {
+    font-weight: bold;
+    height: 30px;
+}
+
+#ost_zamow li .img {
+    height: 58px;
+    padding: 6px 0 6px 20px;
+    min-width: 60px;
+}
+
+#ost_zamow li.first .img {
+    padding: 0 0 0 20px;
+}
+
+#ost_zamow li .img a {
+    display: inline-block;
+}
+
+#ost_zamow li.oczekuje {
+    background-color: #edf6fc;
+}
+
+.karet .oczekuje .status {
+    color: #7896a9;
+}
+
+.karet .realizacja {
+    background-color: #e0f2c9;
+}
+
+.karet .status {
+    color: #508a05;
+}
+
+#ost_zamow li.anulowane {
+    background-color: #ffe4e7;
+}
+
+#ost_zamow li.anulowane .status {
+    color: #dc2e3e;
+}
+
+#ost_zamow li.zrealizowane {
+    background-color: #fff8e4;
+}
+
+#ost_zamow li.zrealizowane .status {
+    color: #d9a505;
+}
+
+#content_konto .nav_konto  {
+    display: inline;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#content_konto .nav_konto a, #content_konto .nav_konto span.on {
+    display: inline-block;
+    width: 28px;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 4px;
+    text-decoration: none;
+    color: #717171;
+    text-shadow: 0 1px #fff;
+    text-align: center;
+    background: url(../images/konto/nav_konto.png) no-repeat 0 0;
+}
+
+#content_konto .nav_konto a:hover, #content_konto .nav_konto span.on {
+    background-position: 0 -26px;
+    color: #f2f2f2;
+    text-shadow: 0 1px #575757;
+}
+
+#content_konto .nav_konto span.break {
+    display: inline-block;
+    margin: 0 6px 0 8px;
+    line-height: 26px;
+    color: #717171;
+    text-shadow: 0 1px #fff;
+}
+
+
+#content_konto #staty_menu {
+    display: inline;
+    float: right;
+    padding-left: 1px;
+    background: url(../images/konto/stat_break.png) no-repeat 0 0;
+}
+
+#content_konto #staty_menu li {
+    display: inline;
+    float: left;
+    padding-right: 1px;
+    background: url(../images/konto/stat_break.png) no-repeat right 0;
+}
+
+#content_konto #staty_menu li a {
+    display: inline;
+    float: left;
+    font-size: 12px;
+    color: #656268;
+    text-shadow: 0 1px #fff;
+    text-decoration: none;
+    line-height: 32px;
+    padding: 4px 10px 0 10px;
+}
+
+#content_konto #staty_menu li a.ust {
+    display: inline;
+    float: left;
+    width: 26px;
+    height: 32px;
+    padding: 4px 10px 0 10px;
+    background: url(../images/konto/stat_ust.png) no-repeat center center;
+}
+
+#content_konto #staty_menu li span {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+#content_konto #staty_menu li.on span {
+    background: url(../images/konto/stat_menu_on.png) repeat-x 0 0;
+}
+
+#content_konto #staty_menu li.on span span {
+    background: url(../images/konto/stat_menu_on_l.png) no-repeat 0 0;
+}
+
+#content_konto #staty_menu li.on span span span {
+    background: url(../images/konto/stat_menu_on_r.png) no-repeat right 0;
+}
+
+#content_konto #staty_menu li.on span span span a {
+    font-weight: bold;
+}
+
+#content_konto #statystki {
+    display: inline;
+    width: 760px;
+    padding: 20px 16px 10px 16px;
+}
+
+
+/* ----------->> END COLUMN RIGHT - INFORMACJE OGÓLNE <<----------- */
+
+
+/* ----------->> END COLUMN RIGHT - ZAMÓWIENIE <<----------- */
+
+#page_wrapper_konto.zamow #top_main_konto, #page_wrapper_konto.zamow #main_wrapper_konto {
+    width: 1520px;
+}
+
+#page_wrapper_konto.zamow #content_top_konto {
+    background: url(../images/konto/content_konto_top_zam.png) no-repeat 0 0;
+}
+
+#page_wrapper_konto.zamow #content_bottom_konto {
+    background: url(../images/konto/content_konto_bottom_zam.png) no-repeat 0 0;
+}
+
+
+#zamowienia {
+    display: inline;
+    float: left;
+}
+
+#zamowienia .nawigacja {
+    display: inline;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding: 8px 0 6px 0;
+    text-shadow: 0 1px #FFFFFF;
+}
+
+#zamowienia .nawigacja div,
+#zamowienia .nawigacja span {
+    display: inline;
+    float: left;
+    line-height: 22px;
+}
+
+#zamowienia .nawigacja span {
+    padding: 0;
+}
+
+#zamowienia .nawigacja .arrow {
+    margin: 5px 0 0 5px;
+}
+
+#zamowienia .nawigacja .arrow a {
+    display: inline;
+    float: left;
+    height: 12px;
+    margin-left: 7px;
+}
+
+#zamowienia .nawigacja .arrow a.next,
+#zamowienia .nawigacja .arrow a.prev {
+    width: 7px;
+    background: url(../images/konto/zamow_arrow1.png) no-repeat -7px 0;
+}
+
+#zamowienia .nawigacja .arrow a.prev {
+    background-position: 0 0;
+}
+
+#zamowienia .nawigacja .arrow a.first,
+#zamowienia .nawigacja .arrow a.last {
+    width: 11px;
+    background: url(../images/konto/zamow_arrow2.png) no-repeat -11px 0;
+}
+
+#zamowienia .nawigacja .arrow a.last {
+    background-position: 0 0;
+}
+
+#zamowienia .nawigacja .break {
+    padding: 0 12px;
+}
+
+#zamowienia .nawigacja .pokaz input {
+    display: inline;
+    float: left;
+    width: 34px;
+    height: 16px;
+    line-height: 16px;
+    padding: 2px 5px;
+    margin: 0 8px;
+    border: 1px solid #b7b7b7;
+    font-size: 12px;
+    color: #656268;
+    text-align: center;
+}
+
+#zamowienia .akcja {
+    display: inline;
+    float: right;
+    margin-top: 4px;
+    height: 27px;
+}
+
+#zamowienia .akcja a {
+    display: inline;
+    float: left;
+    height: 27px;
+    margin-left: 12px;
+}
+
+#zamowienia .akcja #resetuj_zamow {
+    width: 91px;
+    background: url(../images/konto/resetuj.png) no-repeat 0 0;
+}
+
+#zamowienia .akcja #resetuj_zamow:hover {
+    background-position: 0 -27px;
+}
+
+#zamowienia .akcja #filtruj_zamow {
+    width: 122px;
+    background: url(../images/konto/filtruj.png) no-repeat 0 0;
+}
+
+#zamowienia .akcja #filtruj_zamow:hover {
+    background-position: 0 -27px;
+}
+
+#zamowienia #content_page_konto {
+    padding: 15px 0;
+    width: 100%;
+    border: 0;
+}
+
+#zamowienia ul {
+    display: inline;
+    float: left;
+    width: 100%;
+}
+
+#zamowienia li {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 70px;
+    font-size: 12px;
+    color: #37343b;
+    line-height: 70px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#zamowienia li div {
+    display: inline;
+    float: left;
+    height: 70px;
+    padding: 0 0 0 20px;
+    overflow: hidden;
+}
+
+#zamowienia li a {
+    text-decoration: none;
+    color: #37343b;
+}
+
+#zamowienia li a:hover {
+    color: #5f5a66;
+}
+
+#zamowienia li.first {
+    height: 30px;
+    line-height: 30px;
+    border-top: 0;
+    border-color: #f0f0f0;
+}
+
+#zamowienia li.first div {
+    font-weight: bold;
+    height: 30px;
+}
+
+#zamowienia li .id {
+    width: 60px;
+}
+
+#zamowienia li .img {
+    width: 60px;
+    height: 58px;
+    padding: 6px 0 6px 20px;
+}
+
+#zamowienia li.first .img {
+    padding: 0 0 0 20px;
+}
+
+#zamowienia li .img a {
+    display: inline-block;
+}
+
+#zamowienia li .zamawi {
+    width: 155px;
+}
+
+#zamowienia li .mail {
+    width: 155px;
+}
+
+#zamowienia li .data_zam {
+    width: 90px;
+}
+
+#zamowienia li .ilo_szt {
+    width: 90px;
+}
+
+#zamowienia li .kwota {
+    width: 90px;
+}
+
+#zamowienia li .platno {
+    width: 160px;
+}
+
+#zamowienia li .status {
+    width: 90px;
+    font-weight: bold;
+}
+
+#zamowienia li .info {
+    width: 20px;
+    height: 20px;
+    margin-top: 25px;
+    padding: 0;
+}
+
+#zamowienia li .info a {
+    display: inline;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/konto/info_zamow.png) no-repeat center center;
+}
+
+#zamowienia li.oczekuje {
+    background-color: #edf6fc;
+}
+
+#zamowienia li.oczekuje .status {
+    color: #7896a9;
+}
+
+#zamowienia li.realizacja {
+    background-color: #e0f2c9;
+}
+
+#zamowienia li.realizacja .status {
+    color: #508a05;
+}
+
+#zamowienia li.anulowane {
+    background-color: #ffe4e7;
+}
+
+#zamowienia li.anulowane .status {
+    color: #dc2e3e;
+}
+
+#zamowienia li.zrealizowane {
+    background-color: #fff8e4;
+}
+
+#zamowienia li.zrealizowane .status {
+    color: #d9a505;
+}
+
+#content_konto #zamowienia .nav_konto {
+    width: 100%;
+    text-align: center;
+}
+.search_ter{
+    width: auto;
+    height: auto;
+    float: left;
+    margin-left: 15px;
+}
+
+.search_ter input{
+    width: 100%;
+    height: 50px;
+    float: left;
+    border-radius: 5px 0px 0px 5px;
+    margin-top: 15px;
+    border: 0;
+    font-size: 20px;
+    padding-left: 50px;
+    color: #838383;
+}
+.lupa_ser{
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 27px;
+}
+.serch_cal{
+    width: auto;
+    height: auto;
+    float: left;
+}
+.button_search_sp{
+    visibility: hidden;
+    position: fixed;
+}
+.kate_search{
+    width: 140px;
+    height: auto;
+    float: left;
+    margin-left: 50px;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 0 8px 8px 0;
+}
+
+.kate_search select{
+    width: 160px;
+    height: 52px;
+    float: left;
+    border: 0;
+    border-radius: 0px 5px 5px 0px;
+    background: url(../images/konto/pass.jpg) repeat-x center center;
+    color: #ffffff;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    -webkit-appearance: none;
+    padding-left: 10px;
+}
+
+.belka_gora{
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+.balka_glowna{
+    width: auto;
+    height: auto;
+    float: left;
+}
+.balka_prim{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.belka_srodek{
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+}
+.wylog{
+    background: url(../images/konto/bata.jpg) repeat-x center center !important;
+}
+
+.arrowwhit{
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-left: 126px;
+    margin-top: 15px;
+}
+.kwota_do_zaplaty{
+    width: auto;
+    height: auto;
+    float: left;
+    color: #ffffff;
+    text-shadow: #0d3b5f 2px 1px 2px;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.datastyk input {
+    border: 1px solid #B7B7B7;
+    color: #656268;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 8px;
+    padding: 2px 5px;
+    text-align: center;
+    width: 90px;
+}
+
+.wysr_odk{
+    width: 1171px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.blok_pierwszy{
+    width: 735px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    margin-top: 90px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.scieszka_sprzed{
+    width: auto;
+    height: auto;
+    float: left;
+    margin-left: 45px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.dane_formu{
+    width: auto;
+    height: auto;
+    float: left;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    line-height: 24px;
+    margin-left: 45px;
+    font-size: 17px;
+    clear: both;
+}
+
+.batons_akcept{
+    width: 650px;
+    height: auto;
+    float: left;
+    clear: both;
+    margin-left: 43px;
+    margin-top: 20px;
+}
+.batons_akcept a{
+    color: #303030;
+    text-decoration: none;
+}
+
+.batons_akcept a:hover{
+    text-decoration: underline !important;
+}
+.noakcept{
+    width: auto;
+    height: auto;
+    float: left;
+}
+.akcept{
+    width: auto;
+    height: auto;
+    float: right;
+}
+
+.blok_drugi{
+    width: 735px;
+    height: 520px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    margin-top: 90px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.blok_trzeci{
+    width: 735px;
+    height: 530px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    margin-top: 90px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.blok_czwarty{
+    width: 735px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    margin-top: 90px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.limit_ust{
+    height: auto;
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.hasla_tymczas{
+    height: auto;
+    clear: both;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 330px;
+}
+.akcept_ostateczny{
+    width: 359px;
+    height: auto;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+}
+.tekst_spre{
+    height: auto;
+    float: left;
+    margin-left: 45px;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    line-height: 25px;
+    margin-bottom: 40px;
+    margin-left: 45px;
+    width: 650px;
+    font-weight: bold;
+}
+.haslo_tekst{
+    width: auto;
+    height: auto;
+    float: left;
+    clear: both;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    margin-left: 44px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+.haslo_tekst2{
+    width: 645px;
+    height: auto;
+    float: left;
+    clear: both;
+    font-family: 'Century Gothic',CenturyGothic_new;
+    margin-left: 44px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.input_typ input{
+    width: 285px;
+    height: 39px;
+    float: left;
+    background: url(../images/konto/listwa.jpg) repeat-x center center;
+    clear: both;
+    border: 0;
+    padding-left: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.hasla_tymczas label{
+    width: auto;
+    height: auto;
+    float: left;
+    clear: both;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-left: 14px;
+}
+
+.input_typ{
+    width: auto;
+    height: 39px;
+    float: left;
+    clear: both;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d4d1d7;
+    margin-bottom: 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.helperte{
+    width: 17px;
+    height: 17px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 12px;
+    background: url(../images/input_help.png) no-repeat center center;
+}
+.akcepta_ter{
+    width: 735px;
+    height: auto;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 20px;
+    float: left;
+    font-family: 'Century Gothic',CenturyGothic_new;
+}
+#terazera{
+    width: 359px;
+    height: 51px;
+    background: url(../images/konto/zapiszwszyk.png) no-repeat center center;
+    border: 0;
+    display: inline;
+    background-position: 0 -9px;
+    cursor: pointer;
+}
+
+#terazera:hover{
+    background-position: 0 -60px;
+}
+
+.main_link_alert{
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 27px;
+}
+
+.alert_pierwszy{
+    width: 735px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    margin-top: 90px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: #212121;
+}
+
+.blat_konto{
+    width: 100%;
+    height: auto;
+    float: left;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: -4px 4px 7px black;
+    -webkit-box-shadow: -4px 4px 7px black;
+    box-shadow: -4px 4px 7px black;
+}
+.tabela_raz{
+    width: 100%;
+    display:table;
+    height: auto;
+    vertical-align:middle;
+    text-align:center;
+    font-family: Arial,'Helvetica Neue',Helvetica,sans-serif;
+    font-size: 13px;
+}
+
+.tabela_raz a{
+    color: #37343B;
+    text-decoration: none;
+}
+
+.tabela_raz a:hover{
+    text-decoration: underline;
+}
+
+.tabela_raz td{
+    height: 50px;
+    vertical-align: middle;
+}
+.moder td{
+    height: 20px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.karet{
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+}
+
+.karet img{
+margin-left: 10px;
+}
+
+li.wysylka_li{
+    width: 100% !important;
+    height: auto;
+}
+
+.karet .status{
+    font-weight: bold;
+}
+#ost_zamow #content_page_konto2 {
+    background-color: #F9F9F9;
+    border-color: #D4D1D7;
+}
+#content_page_konto2{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border-color: transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    display: inline;
+    float: left;
+    margin-top: 1px;
+    padding: 15px;
+    text-align: center;
+}
+.input_tern{
+    float: left;
+    font-size: 14px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 9px;
+    width: auto;
+}
+.firma_rejesr{
+    font-size: 13px;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    clear: both;
+    text-align: left;
+}
+
+
+#zamowienia td .info a {
+    background: url("../images/konto/info_zamow.png") no-repeat scroll center center transparent;
+    display: inline;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+.pokaz2 input {
+    border: 1px solid #B7B7B7;
+    color: #656268;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0 8px;
+    padding: 2px 5px;
+    text-align: center;
+    width: 80px;
+}
+.logo_takie{
+    width: 275px;
+    height: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+    border-color: #D4D1D7;
+    border-style: solid;
+    border-width: 1px;
+}
+.errors ul li{
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+    color: red !important;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px !important;
+}
+
+.edycja_diva{
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 5px;
+}
+.nazwa_kuriera{
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 2px 10px 2px 2px;
+}
+.uaktualnij_button{
+    width: 124px;
+    height: 30px;
+    background: url(../images/konto/uaktualnij.png) no-repeat center center;
+    border: 0;
+    display: inline;
+    background-position: 0 0px;
+    cursor: pointer;
+    margin-left: 135px;
+    margin-top: 10px;
+    float: left;
+}
+.uaktualnij_button:hover{
+    background-position: 0 -29px;
+}
+ul.wysylka_lista {
+    width: 500px !important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+}
+.konfiguracja{
+    float: left;
+    font-size: 12px;
+    height: auto;
+    margin-left: -50px;
+    margin-top: 8px;
+    width: auto;
+    font-weight: bold;
+}
+.konfiguracja a{
+    text-decoration:none;
+    color: #C3C3C3;
+}
+.konfiguracja a:hover{
+    text-decoration: underline;
+}
+.platnosc_dane_klientow{
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dane_doprze{
+    width: 500px;
+    height: auto;
+    float: left;
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    padding-left: 60px;
+}
+.dane_tytul{
+    width: 500px;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 60px;
+    margin-bottom: 5px;
+}
+#id_kwota_prowizji_za_platnosc_payu{
+    width: 70px;
+}
+#id_kwota_prowizji_za_platnosc_paypal{
+    width: 70px;
+}
+#id_info_przelew{
+    width: 340px;
+}
+#id_info_przy_odbiorze{
+    width: 340px;
+}
+#id_info_payu{
+    width: 340px;
+}
+#id_info_paypal{
+    width: 340px;
+}
+#przelew_plac{
+    display: none;
+}
+#przy_odb{
+    display: none;
+}
+#plac_payu{
+    display: none;
+}
+#plac_paypal{
+    display: none;
+}
+.dodaj_product{
+    float: left;
+    height: auto;
+    margin-left: 40px;
+    width: auto;
+    margin-bottom: 20px;
+}
+input.dodaj_nowy_produkt{
+    width: 259px;
+    height: 90px;
+    float: left;
+    background: url(../images/konto/dodaj_nowy_produktj.png) no-repeat center center;
+    border: 0;
+    display: inline;
+    background-position: 0 0px;
+    cursor: pointer;
+}
+
+input.dodaj_nowy_produkt:hover{
+    background-position: 0 -90px;
+}
+
+input.dodaj_uzywany_produkt{
+    width: 259px;
+    height: 90px;
+    float: left;
+    background: url(../images/konto/dodaj_uzywany_produktj.png) no-repeat center center;
+    border: 0;
+    display: inline;
+    background-position: 0 0px;
+    cursor: pointer;
+}
+
+input.dodaj_uzywany_produkt:hover{
+    background-position: 0 -90px;
+}
+
+.dodawanie_produktow{
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+.dobor_had{
+    width: 100%;
+    height: auto;
+    float: left;
+    text-align: center;
+    border-bottom: 1px dotted #D7D7D7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.daa_taa{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.boks_info_alert{
+    background-color: #F4F4F4;
+    clear: both;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.coma{
+    float: left;
+    height: auto;
+    margin-left: 15px;
+    margin-top: 27px;
+    width: auto;
+}
+.tresc_uwagi_produkt{
+    color: #7E7E7E;
+    float: left;
+    font-size: 13px;
+    height: auto;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 750px;
+}
+.tresc_uwagi_produkt a{
+    color: red;
+    text-decoration: none;
+}
+.tresc_uwagi_produkt a:hover{
+    text-decoration: underline;
+}
+select.kategoria_select{
+    width: 220px;
+}

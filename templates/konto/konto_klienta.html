@@ -1,0 +1,126 @@
+{% extends "base_layout.html" %}
+{% load l10n %}
+{% load tz %}
+
+{%  block title %}
+    Konto klienta
+{% endblock %}
+
+{% block content %}
+    <div class="oferta_teraz">
+
+        <div class="ofert_ter">Panel Klienta</div>
+
+         </div>
+
+    <div class="oferta_teraz">
+        <div class="witer_tek"> Witaj, <span style="font-weight: bold;"> {{ user }}</span></div>
+    </div>
+
+    <div class="boks_plikow">
+
+    </div>
+        <div class="detale_oferty">
+            <div class="srodek_loginu">
+                <div class="prokter">
+                    <div class="image_tekar"><img src="{{ STATIC_URL }}images/fakt_tres.png" alt="Faktury"/></div>
+                    <div class="itekterme">
+                        <span style="font-weight: bold;">PŁATNOŚCI I FAKTURY</span><br/>
+                        Poniżej znajduje się lista oraz szczegółowe informacje na temat wystawionych faktur.
+                    </div>
+                    <div class="tabliktan">
+                        <table class="tablaster"  width="100%" align="center">
+                            <tr class="linia_ter">
+                                <td><span style="font-weight: bold;">Numer zamówienia</span></td>
+                                <td><span style="font-weight: bold;">Kwota</span></td>
+                                <td><span style="font-weight: bold;">Usługa</span></td>
+                                <td><span style="font-weight: bold;">Data wystawienia</span></td>
+                                <td><span style="font-weight: bold;">Zapłać</span></td>
+                                <td><span style="font-weight: bold;">Status faktury</span></td>
+                                <td><span style="font-weight: bold;">Pobierz</span></td>
+                            </tr>
+                            {% for b in query %}
+                            <tr>
+                                <td>{{ b.numer_zamowienia }}</td>
+                                <td><span style="font-weight: bold;">{{ b.suma_brutto }} zł</span></td>
+                                <td class="tekst_tabell">{{ b.nazwa_serwera }}
+                                    <br/><span style="font-weight: bold;">ważność do: {{ b.pozostalo_dni.1 }}</span>
+                                </td>
+                                <td>{{ b.data_zamowienia }}</td>
+                                <td><a href="{% ifequal b.rodzaj_platnosci "PayPal" %}zamowienie_paypal{% else %}zamowienie_przelew{% endifequal %}/{{ b.id }}">Zapłać</a></td>
+                                {% if b.realizacja %}
+                                    <td><span style="color: green;">opłacona</span></td>
+                                <td>
+                                    <a href="pdf/{{ b.id }}" target="_blank"><img src="{{ STATIC_URL }}images/pdf.png" alt="PDF"/></a>
+                                {% else %}
+                                <td><span style="color: #ff0000;">nieopłacona</span></td>
+                                <td>
+                                    -
+                                {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+                <div class="prokter2">
+                    <div class="image_tekar"><img src="{{ STATIC_URL }}images/books.png" alt="Usługi"/></div>
+                    <div class="itekterme">
+                        <span style="font-weight: bold;">AKTYWNE USŁUGI</span><br/>
+                        Poniżej znajduje się lista aktywnych usług oraz szczegółowe informacje na ich temat.
+                    </div>
+                    <div class="tabliktan2">
+                        <table class="tablaster"  width="100%" align="center">
+                            <tr class="linia_ter">
+                                <td><span style="font-weight: bold;">Szczegóły usługi</span></td>
+                                <td><span style="font-weight: bold;">Data uruchomienia</span></td>
+                                <td><span style="font-weight: bold;">Data wygaśnięcia</span></td>
+                                <td><span style="font-weight: bold;">Pozostało</span></td>
+                                <td><span style="font-weight: bold;"></span></td>
+                            </tr>
+                            {% for c in query %}
+                                <tr>
+                                    <td><span style="font-weight: bold;">{{ c.nazwa_serwera }}</span>
+                                        <ul class="uilete">
+                                            {% for kc in c.dodatki.all %}
+                                            <li>{{ kc }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>{{ c.data_zamowienia }}</td>
+                                    <td>{{ c.pozostalo_dni.1 }}</td>
+                                    <td><span style="color: green;">{{ c.pozostalo_dni.0 }} dni</span></td>
+                                    <td><a href="{{ c.link_do_cpanelu }}" target="_blank"><img src="{{ STATIC_URL }}images/cpane.png" alt="CPanel"/></a></td>
+
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+                <div class="prokter3">
+                    <div class="image_tekar"><img src="{{ STATIC_URL }}images/books.png" alt="Usługi"/></div>
+                    <div class="itekterme">
+                        <span style="font-weight: bold;">TWOJE DANE</span><br/>
+                        Jeżeli twoje dane uległy zmianie, prosimy o kontakt.
+                    </div>
+                    <div class="tabliktan3">
+                         <div class="dane_projkkole">
+                              <span style="font-weight: bold;">{{ imie }} {{ nazwisko }}</span> <br/>
+                                       ul. {{ adres }}, {{ kod }} {{ miasto }}, Kraj: {{ kraj }}<br/>
+                                        Województwo: {{ wojewodztwo }}<br/>
+                                        tel. {{ telefon }}<br/>
+                                        tel. dodatk. {{ tel_dodatkowy }}<br/>
+                                        {{ nazwafirmy }}<br/>
+                                        NIP: {{ nip }}<br />
+                                        {% if regon %}
+                                        REGON: {{ regon }}<br/>
+                                        {% endif %}
+                         </div>
+                    </div>
+                </div>
+                    <div class="image_tekar2"><img src="{{ STATIC_URL }}images/masz_pytania.jpg" alt="Pomoc techniczna"/></div>
+            </div>
+        </div>
+{% endblock %}

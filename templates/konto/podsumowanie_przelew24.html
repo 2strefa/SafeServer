@@ -1,0 +1,73 @@
+{% extends "base_layout.html" %}
+
+
+
+{%  block title %}
+
+    Podsumowanie koszyka
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="oferta_teraz">
+
+
+
+        <div class="ofert_ter"><span style="font-weight: bold;">Podsumowanie</span> - <span style="color: #8f8f8f;">koszyka</span></div>
+
+
+
+        <div class="powrot_oferta"><a href="{% url hosting_index %}"><img src="{{ STATIC_URL }}images/powrot_oferta.png" alt="Powrót do oferty" title="Powrót do oferty hostingu" /></a></div>
+
+    </div>
+
+
+
+    <div class="oferta_teraz">
+
+
+
+        <div class="sciezka_center">
+
+
+
+            <div class="przciski_listy2">Specyfikacja serwera</div>
+
+            <div class="przciski_listy2">Dodatki</div>
+
+            <div class="przciski_listy2">Weryfikacja klienta</div>
+
+            <div class="przciski_listy2">Płatność</div>
+
+            <div class="przciski_listy">Podsumowanie</div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="boks_plikow">
+
+
+
+    </div>
+
+        <div class="detale_oferty">
+
+            <div class="srodek_loginu">
+
+                {{ form.render }}
+
+            </div>
+
+        </div>
+
+{% endblock %}

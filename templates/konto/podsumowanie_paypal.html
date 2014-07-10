@@ -1,0 +1,195 @@
+{% extends "base_layout.html" %}
+
+{% load l10n %}
+
+{% load tz %}
+
+
+
+{%  block title %}
+
+    Podsumowanie koszyka
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="oferta_teraz">
+
+
+
+        <div class="ofert_ter"><span style="font-weight: bold;">Podsumowanie</span> - <span style="color: #8f8f8f;">koszyka</span></div>
+
+
+
+        <div class="powrot_oferta"><a href="{% url hosting_index %}"><img src="{{ STATIC_URL }}images/powrot_oferta.png" alt="Powrót do oferty" title="Powrót do oferty hostingu" /></a></div>
+
+    </div>
+
+
+
+    <div class="oferta_teraz">
+
+
+
+        <div class="sciezka_center">
+
+
+
+            <div class="przciski_listy2">Specyfikacja serwera</div>
+
+            <div class="przciski_listy2">Dodatki</div>
+
+            <div class="przciski_listy2">Weryfikacja klienta</div>
+
+            <div class="przciski_listy2">Płatność</div>
+
+            <div class="przciski_listy">Podsumowanie</div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="boks_plikow">
+
+
+
+    </div>
+
+<form action="." method="POST">
+
+    {% csrf_token %}
+
+        <div class="detale_oferty">
+
+            <div class="srodek_loginu">
+
+                        <div class="dodatki_pliki">
+
+                        <div class="numer_dane">Numer zamówienia: <span style="font-weight: bold;">SAF#0{{ idt }}/{{ data_ter|date:"Y"  }}</span> z dnia {{ data_ter|date:"d-m-Y"  }}r.</div>
+
+                            <div class="dane_loginn">
+
+                                <div class="dane_albi">
+
+                                    <div class="dane_projkk">
+
+                                        <div class="danke">Nazwa serwera :</div> <span style="font-weight: bold;">{{ nazwa_ofert }}</span> <br/>
+
+                                        <div class="danke">Dodatki :</div> <span style="font-weight: bold;">{{ dodatek }}</span> <br/>
+
+                                        <div class="danke">Rodzaj płatności :</div> <span style="font-weight: bold;">{{ nazwa_platnosc }}</span> <br/>
+
+                                        <div class="danke">Suma netto :</div> <span style="font-weight: bold;">{{ suma_netto }} zł</span> <br/>
+
+                                        <div class="danke">Podatek +23% :</div> <span style="font-weight: bold;">{{ podatek_vat }} zł VAT</span> <br/>
+
+                                        <div class="danke">Suma brutto :</div> <span style="font-weight: bold;">{{ suma_brutto }} zł</span> <br/>
+
+                                    </div>
+
+                                    <div class="dane_projkk">
+
+                                        <div class="danke">Login :</div> <span style="font-weight: bold;">{{ login_userr }}</span> <br/>
+
+                                        <div class="danke">Imię :</div> <span style="font-weight: bold;">{{ imie_me }}</span> <br/>
+
+                                        <div class="danke">Nazwisko :</div> <span style="font-weight: bold;">{{ nazwisko_me }}</span> <br/>
+
+                                        <div class="danke">E-mail :</div> <div class="firma_tekst"><span style="font-weight: bold;">{{ email_me }}</span></div> <br/>
+
+                                        <div class="danke">Faktura VAT :</div> <span style="font-weight: bold;">{{ faktura_nazwa }}</span> <br/>
+
+                                        <div class="danke">Telefon kontaktowy :</div> <span style="font-weight: bold;">{{ telefonn }}</span> <br/>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    <div class="paypal_realizujj">
+
+                        <div class="paypal_realizujj2">
+
+                            <input id="id_login" type="hidden" value="{{ login_userr }}" name="login" maxlength="264" />
+
+                            <input id="id_nazwa_serwera" type="hidden" value="{{ nazwa_ofert }}" name="nazwa_serwera" maxlength="264" />
+
+                            <input id="id_imie" type="hidden" value="{{ imie_me }}" maxlength="264" name="imie">
+
+                            <input id="id_nazwisko" type="hidden" value="{{ nazwisko_me }}" maxlength="264" name="nazwisko">
+
+                            <input id="id_dodatki" type="hidden" value="{{ dodatek }}" name="dodatki" maxlength="264" />
+
+                            <input id="id_rodzaj_platnosci" type="hidden" value="{{ nazwa_platnosc }}" name="rodzaj_platnosci" maxlength="264" />
+
+                            <input id="id_suma_netto" type="hidden" value="{{ suma_netto|unlocalize }}" name="suma_netto" maxlength="264" />
+
+                            <input id="id_suma_brutto" type="hidden" value="{{ suma_brutto|unlocalize }}" name="suma_brutto" maxlength="264" />
+
+                            <input id="id_numer_zamowienia" type="hidden" value="SAF#0{{ idt }}/{{ data_ter|date:"Y"  }}" name="numer_zamowienia" maxlength="264" />
+
+                            <input id="id_data_zamowienia" type="hidden" value="{{ data_ter|date:"d-m-Y"  }}" name="data_zamowienia" maxlength="264" />
+
+                            <input type="submit" value="" class="koterstaer">
+
+                        </div>
+
+                    </div>
+
+                <!--<div class="paypal_realizujj">
+
+                    <div class="paypal_realizujj2">
+
+                        <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+
+                            <input id="id_business" type="hidden" value="biuro@2strefa.pl" name="business">
+
+                            <input id="id_amount" type="hidden" value="{{ suma_brutto|unlocalize }}" name="amount">
+
+                            <input id="id_item_name" type="hidden" value="{{ pay_nazwa }}" name="item_name">
+
+                            <input id="id_notify_url" type="hidden" value="http://safeserver.pl/moj_ipn/" name="notify_url">
+
+                            <input id="id_cancel_return" type="hidden" value="http://safeserver.pl/konto_klienta/platnosc_paypal_odrzucona/" name="cancel_return">
+
+                            <input id="id_return_url" type="hidden" value="http://safeserver.pl/konto_klienta/platnosc_paypal_zaakceptowana/" name="return">
+
+                            <input id="id_invoice" type="hidden" value="SAF#0{{ idt }}/{{ data_ter|date:"Y"  }}" name="invoice">
+
+                            <input id="id_cmd" type="hidden" value="_xclick" name="cmd">
+
+                            <input id="id_charset" type="hidden" value="utf-8" name="charset">
+
+                            <input id="id_currency_code" type="hidden" value="PLN" name="currency_code">
+
+                            <input id="id_no_shipping" type="hidden" value="1" name="no_shipping">
+
+                            <input type="submit" value="" name="submit" class="koterstaer">
+
+                        </form>
+
+                    </div>
+
+                </div>-->
+
+            </div>
+
+        </div>
+
+</form>
+
+{% endblock %}
